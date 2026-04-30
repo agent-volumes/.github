@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 562.5" width="100%" height="100%">
+  <defs>
+    <style>
+      @font-face {
+        font-family: 'Pretendard Std Variable';
+        font-weight: 45 920;
+        font-display: swap;
+        src: url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/packages/pretendard-std/dist/web/variable/woff2-dynamic-subset/PretendardStdVariable.subset.6.woff2') format('woff2-variations');
+      }
+    </style>
+
+    <linearGradient id="leftPage" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#6366f1"/>
+      <stop offset="100%" stop-color="#a855f7"/>
+    </linearGradient>
+
+    <linearGradient id="rightPage" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/>
+      <stop offset="100%" stop-color="#3b82f6"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(210, 291.25) scale(0.8)">
+    <path d="M 0 60 L -140 -10 L -100 -100 L 0 -30 Z" fill="url(#leftPage)" opacity="0.15"/>
+    <path d="M 0 60 L 140 -10 L 100 -100 L 0 -30 Z" fill="url(#rightPage)" opacity="0.15"/>
+    <path d="M 0 100 L -160 20 L -120 -80 L 0 0 Z" fill="none" stroke="url(#leftPage)" stroke-width="8" stroke-linejoin="round" opacity="0.8"/>
+    <path d="M 0 100 L 160 20 L 120 -80 L 0 0 Z" fill="none" stroke="url(#rightPage)" stroke-width="8" stroke-linejoin="round" opacity="0.8"/>
+    <line x1="0" y1="100" x2="0" y2="0" stroke="#1e293b" stroke-width="8" stroke-linecap="round"/>
+    <rect x="-5" y="-132" width="10" height="12" rx="2" fill="#1e293b"/>
+
+    <g transform="translate(0, -110) rotate(-30)">
+      <polygon points="-6,14 6,14 4,80 -4,80" fill="url(#leftPage)"/>
+      <polygon points="-2,80 2,80 0,120" fill="#a855f7"/>
+      <rect x="-5" y="77" width="10" height="6" rx="1" fill="#1e293b"/>
+    </g>
+
+    <g transform="translate(0, -110) rotate(30)">
+      <polygon points="-6,14 6,14 4,80 -4,80" fill="url(#rightPage)"/>
+      <polygon points="-2,80 2,80 0,120" fill="#06b6d4"/>
+      <rect x="-5" y="77" width="10" height="6" rx="1" fill="#1e293b"/>
+    </g>
+
+    <g transform="translate(0, -55)">
+      <rect x="-38" y="-3" width="76" height="6" rx="3" fill="#1e293b"/>
+      <circle cx="-31.75" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+      <circle cx="31.75" cy="0" r="4.5" fill="#ffffff" stroke="#1e293b" stroke-width="2"/>
+    </g>
+
+    <circle cx="0" cy="-110" r="14" fill="#ffffff" stroke="#1e293b" stroke-width="6"/>
+    <circle cx="0" cy="-110" r="4" fill="#1e293b"/>
+    <circle cx="0" cy="100" r="10" fill="#1e293b"/>
+
+    <circle cx="-160" cy="20" r="8" fill="#a855f7"/>
+    <circle cx="160" cy="20" r="8" fill="#06b6d4"/>
+    <circle cx="-120" cy="-80" r="8" fill="#6366f1"/>
+    <circle cx="120" cy="-80" r="8" fill="#3b82f6"/>
+  </g>
+
+  <text x="370" y="286.25" font-family="'Pretendard Std Variable', sans-serif" font-size="58" font-weight="800" fill="#0f172a" text-anchor="start" letter-spacing="5">AGENT VOLUMES</text>
+  <text x="375" y="331.25" font-family="'Pretendard Std Variable', sans-serif" font-size="22" font-weight="500" fill="#475569" text-anchor="start" letter-spacing="20">ORGANIZATION</text>
+</svg>

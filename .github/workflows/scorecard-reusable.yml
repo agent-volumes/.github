@@ -1,0 +1,97 @@
+# Reusable Scorecard workflow for Agent Volumes organization repositories.
+#
+# Downstream repositories can call this workflow via `workflow_call` to run
+# OpenSSF Scorecard analysis, optionally publish public results, upload SARIF
+# to GitHub code scanning, and store artifacts for review.
+
+name: Agent Volumes Scorecard supply-chain security
+
+on:
+  workflow_call:
+    inputs:
+      results-file:
+        description: 'Path to the SARIF results file'
+        required: false
+        type: string
+        default: 'results.sarif'
+      results-format:
+        description: 'Results format (sarif, json, csv)'
+        required: false
+        type: string
+        default: 'sarif'
+      publish-results:
+        description: 'Publish results to OpenSSF REST API'
+        required: false
+        type: boolean
+        default: true
+      repo-token:
+        description: 'Fine-grained PAT for Branch-Protection check'
+        required: false
+        type: string
+        default: ''
+      file-mode:
+        description: 'File mode for .gitattributes export-ignore'
+        required: false
+        type: string
+        default: ''
+      retention-days:
+        description: 'Artifact retention days'
+        required: false
+        type: number
+        default: 5
+      upload-artifact:
+        description: 'Upload results as artifact'
+        required: false
+        type: boolean
+        default: true
+      upload-code-scanning:
+        description: 'Upload results to GitHub code scanning dashboard'
+        required: false
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+
+jobs:
+  analysis:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: read
+      pull-requests: read
+      checks: read
+      security-events: write
+      id-token: write
+    steps:
+      - name: Harden the runner (Audit all outbound calls)
+        uses: step-security/harden-runner@8d3c67de8e2fe68ef647c8db1e6a09f647780f40 # v2.19.0
+        with:
+          egress-policy: audit
+
+      - name: Checkout repository
+        uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+        with:
+          persist-credentials: false
+
+      - name: Run OpenSSF Scorecard
+        uses: ossf/scorecard-action@62b2cac7f8559dca8e2df28a865eb0636ea03b62 # v2.4.1
+        with:
+          results_file: ${{ inputs.results-file }}
+          results_format: ${{ inputs.results-format }}
+          publish_results: ${{ inputs.publish-results }}
+          repo_token: ${{ inputs.repo-token }}
+
+      - name: Upload artifact
+        if: ${{ inputs.upload-artifact }}
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: scorecard-results
+          path: ${{ inputs.results-file }}
+          retention-days: ${{ inputs.retention-days }}
+
+      - name: Upload to code-scanning
+        if: ${{ inputs.upload-code-scanning }}
+        uses: github/codeql-action/upload-sarif@95e58e9a2cdfd71adc6e0353d5c52f41a045d225 # v4.35.2
+        with:
+          sarif_file: ${{ inputs.results-file }}

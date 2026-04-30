@@ -1,0 +1,58 @@
+# Dependabot configuration for Agent Volumes .github repository
+# Automated dependency updates for GitHub Actions workflows
+#
+# This repository does not declare application/package dependencies,
+# so only the github-actions ecosystem is configured.
+#
+# References:
+# - https://docs.github.com/en/code-security/dependabot
+# - SECURITY.md for supply chain integrity requirements
+
+version: 2
+
+updates:
+  # GitHub Actions — keeps workflow action references up to date
+  - package-ecosystem: 'github-actions'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '09:00'
+      timezone: 'Asia/Seoul'
+    open-pull-requests-limit: 10
+    groups:
+      # Group GitHub official actions together
+      github-actions:
+        patterns:
+          - 'actions/*'
+        update-types:
+          - 'minor'
+          - 'patch'
+      # Step-security actions (harden-runner)
+      step-security-actions:
+        patterns:
+          - 'step-security/*'
+        update-types:
+          - 'minor'
+          - 'patch'
+      # OpenSSF Scorecard action
+      scorecard-actions:
+        patterns:
+          - 'ossf/scorecard-action'
+        update-types:
+          - 'minor'
+          - 'patch'
+    commit-message:
+      prefix: 'ci'
+      include: 'scope'
+    labels:
+      - 'dependencies'
+      - 'github-actions'
+      - 'security'
+    # Cooldown: GitHub Actions per SECURITY.md
+    # GitHub Actions only supports default-days (not SemVer-based cooldown)
+    cooldown:
+      default-days: 3
+
+# Note: This repository has no application dependencies (no package.json, Cargo.toml, etc.).
+# If future ecosystems are added, extend this configuration accordingly.

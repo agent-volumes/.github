@@ -71,22 +71,42 @@ We support good-faith security research. We ask that you:
 
 Agent Volumes follows the [SLSA (Supply-chain Levels for Software Artifacts)](https://slsa.dev/) framework as aspirational guidance to ensure the integrity of our specifications and documentation.
 
+### At a Glance
+
+- Build L1/L2 required; Build L3 target
+- Source L1/L2 required; Source L3 target
+- Source L4 not achievable in a 1-person organization
+- SHA-pinned workflows, hardened runners, least-privilege permissions
+- Lockfiles committed, dependency review, OSV scanning
+- Signed commits & protected branches required
+
+### Detailed Requirements
+
+| Topic                     | Companion document                                                                         |
+| :------------------------ | :----------------------------------------------------------------------------------------- |
+| SLSA compliance framework | [docs/security/slsa-compliance-framework.md](./docs/security/slsa-compliance-framework.md) |
+| Workflow hardening        | [docs/security/workflow-hardening.md](./docs/security/workflow-hardening.md)               |
+| Dependency security       | [docs/security/dependency-security.md](./docs/security/dependency-security.md)             |
+
 ### Source Integrity
+
+#### Commit Signing
 
 All commits to protected branches must be cryptographically signed. We support:
 
 - **GPG signing**
 - **SSH signing**
-- **Sigstore gitsign** (recommended)
+- **Sigstore gitsign**
 
-### Branch Protection
+#### Branch Protection
 
-Repositories enforce the following protections for main branches:
+All repositories must enforce:
 
-- Signed commits required
-- Status checks must pass before merging
-- Linear history required (no merge commits)
-- Force pushes are blocked
+- Require signed commits
+- Require pull request reviews (minimum 1 reviewer)
+- Require status checks to pass before merging
+- Require linear history (no merge commits)
+- Restrict force pushes
 
 ### Aspiration: Release Integrity
 
@@ -94,15 +114,41 @@ While we currently focus on documentation and specifications, we aim to provide 
 
 ## Security Monitoring
 
-We use the following tools to maintain our security posture:
+### Audit Logging
 
-- **Dependabot:** Automated dependency monitoring and alerts
-- **Secret Scanning:** Prevents accidental leakage of credentials in repositories
-- **GitHub Audit Log:** Monitors organization-level activity
-- **OpenSSF Scorecard:** Periodically evaluates repositories against security best practices
+- All workflow runs are logged via GitHub's audit log
+- Access to secrets is logged
+- Deployment activity is tracked
+
+### Vulnerability Scanning
+
+- Dependabot alerts are enabled on all repositories
+- Code scanning with CodeQL and/or Semgrep runs on all PRs
+- OSV Scanner runs on PRs and scheduled full scans
+- Secret scanning prevents credential leakage
+
+### Security Scorecard
+
+This organization uses [OpenSSF Scorecard](https://securityscorecards.dev/) to continuously monitor security posture:
+
+- Binary artifacts
+- Branch protection
+- Code review
+- Dependency update tool
+- Fuzzing
+- License
+- Maintained
+- Pinned dependencies
+- SAST
+- Security policy
+- Signed releases
+- Token permissions
+- Vulnerabilities
 
 ## References
 
-- [SLSA Framework](https://slsa.dev/)
-- [OpenSSF Scorecard](https://securityscorecards.dev/)
-- [GitHub Security Advisories](https://docs.github.com/en/code-security/security-advisories)
+Detailed reference lists for each topic are available in the companion documents:
+
+- [SLSA Framework references](./docs/security/slsa-compliance-framework.md#references)
+- [GitHub Security and Step Security references](./docs/security/workflow-hardening.md#references)
+- [OSV Scanner and Additional Resources](./docs/security/dependency-security.md#references)

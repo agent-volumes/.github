@@ -1,5 +1,7 @@
 # .github
 
+![The Agent Volumes Organization Logo](./assets/logo/banner/solid-bg/agent-volumes-logo-banner-with-bg-4-1.svg)
+
 [![Markdown Lint and Format](https://github.com/agent-volumes/.github/actions/workflows/markdown-lint.yml/badge.svg)](https://github.com/agent-volumes/.github/actions/workflows/markdown-lint.yml)
 [![CodeQL](https://github.com/agent-volumes/.github/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/agent-volumes/.github/actions/workflows/github-code-scanning/codeql)
 [![Dependency Review](https://github.com/agent-volumes/.github/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/agent-volumes/.github/actions/workflows/dependency-review.yml)

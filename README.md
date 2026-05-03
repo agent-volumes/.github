@@ -338,3 +338,25 @@ bunx lefthook run pre-commit
 #### CI/CD
 
 Pull requests and pushes to `main` that modify Markdown files trigger automated linting and formatting checks via GitHub Actions.
+
+### SVG Optimization
+
+SVG logo assets are managed in two forms for maintainability and performance:
+
+- **`assets/logo/src/`** — Source of truth with full readability (hand-editable)
+- **`assets/logo/`** — Deploy-optimized versions consumed by README and other docs
+
+The optimized versions are generated with [SVGO](https://github.com/svg/svgo) from the readable source files. The configuration (`svgo.config.mjs`) preserves `viewBox` for responsive rendering while removing unnecessary metadata.
+
+#### Available Scripts
+
+| Script                       | Description                                   |
+| ---------------------------- | --------------------------------------------- |
+| `bun run format:svg`         | Format readable source SVGs in `src/`         |
+| `bun run format:svg:check`   | Check source SVG formatting without modifying |
+| `bun run svg:optimize`       | Regenerate optimized SVGs from `src/`         |
+| `bun run svg:optimize:check` | Preview output without writing files          |
+
+#### Pre-commit Hooks
+
+When SVG source files under `assets/logo/src/` are staged, Prettier first normalizes the editable source SVGs for readability and style consistency, then SVGO regenerates the optimized deploy versions in `assets/logo/` and re-stages both source and output files.

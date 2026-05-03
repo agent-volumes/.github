@@ -28,3 +28,17 @@ pre-commit:
         echo "📦 Re-staging fixed files..."
         git add {staged_files}
         echo "✅ Pre-commit checks completed!"
+
+    - name: Optimize SVG assets
+      glob: "assets/logo/src/**/*.svg"
+      run: |
+        set -e
+        echo "🧹 Formatting source SVG files for readability..."
+        bunx prettier --write {staged_files}
+        echo "📦 Re-staging formatted source SVG files..."
+        git add {staged_files}
+        echo "🎨 Optimizing SVG source files to deploy versions..."
+        bunx svgo -f assets/logo/src --recursive -o assets/logo --config=svgo.config.mjs
+        echo "📦 Re-staging optimized SVG files..."
+        git add assets/logo/**/*.svg
+        echo "✅ SVG optimization complete!"

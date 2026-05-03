@@ -34,11 +34,11 @@ Typos, grammar fixes, broken links, and formatting improvements can be submitted
 
 The specification follows a staged lifecycle:
 
-| Stage | Description |
-| ----- | ----------- |
-| **Working Draft** | Active development. Breaking changes expected. |
+| Stage                        | Description                                    |
+| ---------------------------- | ---------------------------------------------- |
+| **Working Draft**            | Active development. Breaking changes expected. |
 | **Candidate Recommendation** | Feature-complete. Implementer feedback sought. |
-| **Stable** | Released. Only backwards-compatible changes. |
+| **Stable**                   | Released. Only backwards-compatible changes.   |
 
 The current specification is a **Working Draft**.
 
@@ -64,7 +64,7 @@ This project follows **trunk-based development**, consistent with the model used
 
 This project uses the [Developer Certificate of Origin (DCO)](https://developercertificate.org/). All commits must include a `Signed-off-by` line:
 
-```
+```text
 Signed-off-by: Your Name <your.email@example.com>
 ```
 

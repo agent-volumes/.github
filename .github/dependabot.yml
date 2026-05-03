@@ -1,8 +1,6 @@
 # Dependabot configuration for Agent Volumes .github repository
 # Automated dependency updates for GitHub Actions workflows
-#
-# This repository does not declare application/package dependencies,
-# so only the github-actions ecosystem is configured.
+# Security-hardened supply chain automation following SLSA compliance
 #
 # References:
 # - https://docs.github.com/en/code-security/dependabot
@@ -11,7 +9,51 @@
 version: 2
 
 updates:
-  # GitHub Actions — keeps workflow action references up to date
+  # Bun/NPM ecosystem - development dependencies for linting/formatting
+  # Uses bun.lock for deterministic dependency resolution
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'weekly'
+      day: 'monday'
+      time: '09:00'
+      timezone: 'Asia/Seoul'
+    # Security updates are prioritized and created immediately
+    open-pull-requests-limit: 10
+    # Group related dependencies to reduce PR noise
+    groups:
+      # Development tooling dependencies
+      dev-dependencies:
+        patterns:
+          - 'lefthook'
+          - 'markdownlint-cli2'
+          - 'prettier'
+        update-types:
+          - 'minor'
+          - 'patch'
+    # Commit message conventions aligned with repository standards
+    commit-message:
+      prefix: 'chore'
+      prefix-development: 'chore(dev)'
+      include: 'scope'
+    # Labels for easy identification and triage
+    labels:
+      - 'dependencies'
+      - 'javascript'
+    # Semantic versioning strategy
+    versioning-strategy: 'auto'
+    # Allow all direct dependencies (production and development)
+    allow:
+      - dependency-type: 'direct'
+    # Cooldown: Development dependencies per SECURITY.md (NPM/Bun Development)
+    # Patch: 1-3 days | Minor: 3-7 days | Major: 14-21 days
+    cooldown:
+      default-days: 3
+      semver-major-days: 14
+      semver-minor-days: 3
+      semver-patch-days: 1
+  # GitHub Actions - critical for SLSA compliance and SHA-pinning
+  # All workflows use SHA-pinned actions per SECURITY.md requirements
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
@@ -54,5 +96,5 @@ updates:
     cooldown:
       default-days: 3
 
-# Note: This repository has no application dependencies (no package.json, Cargo.toml, etc.).
-# If future ecosystems are added, extend this configuration accordingly.
+# Note: This repository has no Docker, no other package ecosystems
+# If future ecosystems are added (e.g., Python for scripts), add sections here

@@ -1,12 +1,5 @@
-# Agent Volumes Organization Dependency Review Configuration
+# The Agent Volumes Organization Dependency Review Configuration
 # Centralized policy for dependency-review-action across all repositories.
-#
-# This future-facing organization policy is intended for Agent Volumes
-# repositories that declare dependencies via supported manifests and submit
-# dependency data to GitHub.
-#
-# Note: This .github repository itself does not currently consume this config,
-# because it does not declare application/package dependencies.
 #
 # Usage in repository workflows:
 #   - uses: actions/dependency-review-action@v4
@@ -169,9 +162,7 @@ retry-on-snapshot-warnings-timeout: 120
 # REPOSITORY-SPECIFIC OVERRIDES
 # =============================================================================
 #
-# Repositories can override these settings in their local workflow.
-# This centralized configuration is most useful for repositories with
-# dependency manifests (for example npm, pnpm, yarn, pip, Cargo, Go, or Maven).
+# Repositories can override these settings in their local workflow:
 #
 # Example per-repo workflow override:
 #
@@ -194,4 +185,4 @@ retry-on-snapshot-warnings-timeout: 120
 #   - Retained comprehensive allow-list license policy for non-profit use
 #   - Set default severity: moderate
 #   - Enabled OpenSSF Scorecard integration
-#   - Clarified that this .github repository does not consume the config itself
+#   - Added comprehensive documentation

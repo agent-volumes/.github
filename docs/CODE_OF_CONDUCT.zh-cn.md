@@ -2,7 +2,7 @@
 
 # 贡献者公约
 
-[English](../CODE_OF_CONDUCT.md) | [한국어](CODE_OF_CONDUCT.ko.md) | 简体中文 | [Deutsch](CODE_OF_CONDUCT.de.md) | [Français](CODE_OF_CONDUCT.fr.md)
+[English](../CODE_OF_CONDUCT.md) | [한국어](CODE_OF_CONDUCT.ko.md) | 简体中文 | [Deutsch](CODE_OF_CONDUCT.de.md) | [Français](CODE_OF_CONDUCT.fr.md) | [বাংলা](CODE_OF_CONDUCT.bn.md) | [Magyar](CODE_OF_CONDUCT.hu.md)
 
 </div>
 

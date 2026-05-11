@@ -33,6 +33,8 @@ The Code of Conduct is available in multiple languages:
 | 简体中文 (Chinese Simplified) | [`docs/CODE_OF_CONDUCT.zh-cn.md`](./docs/CODE_OF_CONDUCT.zh-cn.md) |
 | Deutsch (German)              | [`docs/CODE_OF_CONDUCT.de.md`](./docs/CODE_OF_CONDUCT.de.md)       |
 | Français (French)             | [`docs/CODE_OF_CONDUCT.fr.md`](./docs/CODE_OF_CONDUCT.fr.md)       |
+| বাংলা (Bengali)               | [`docs/CODE_OF_CONDUCT.bn.md`](./docs/CODE_OF_CONDUCT.bn.md)       |
+| Magyar (Hungarian)            | [`docs/CODE_OF_CONDUCT.hu.md`](./docs/CODE_OF_CONDUCT.hu.md)       |
 
 ### Issue and PR Templates
 

@@ -1,0 +1,39 @@
+name: Organization Policy Change
+description: Propose changes to organization-wide policies or health files.
+title: '[POLICY]: '
+labels: ['type:proposal', 'status:needs-triage', 'area:policy']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template in `agent-volumes/.github` to propose organization-wide policy changes, such as updates to `CONTRIBUTING.md`, `CODE_OF_CONDUCT.md`, common issue/PR templates, or reusable CI/CD workflow standards.
+
+        If you are proposing a specification text, schema, OpenAPI, or conformance change, use the `agent-volumes/agent-volumes-spec` repository instead.
+  - type: checkboxes
+    id: policy-confirmation
+    attributes:
+      label: Repository confirmation
+      options:
+        - label: This proposal changes organization-wide policy or default community health files, not a repository-local implementation or specification artifact.
+          required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem is this policy change trying to solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed Change
+      description: Describe the changes to the policy or health files.
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: How does this affect contributors or repositories in the organization?
+    validations:
+      required: true

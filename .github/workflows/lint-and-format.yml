@@ -1,4 +1,4 @@
-name: Markdown Lint and Format
+name: Repository Lint and Format
 
 permissions:
   contents: read
@@ -8,18 +8,38 @@ on:
     paths:
       - '**/*.md'
       - '**/*.mdx'
-      - '.github/workflows/markdown-lint.yml'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - '**/*.json'
+      - '**/*.jsonc'
+      - '**/*.mjs'
+      - 'assets/logo/**/*.svg'
+      - 'assets/logo/src/**/*.svg'
+      - '.github/workflows/lint-and-format.yml'
       - '.markdownlint-cli2.jsonc'
       - '.prettierrc'
+      - 'bun.lock'
+      - 'lefthook.yml'
+      - 'package.json'
   push:
     branches:
       - main
     paths:
       - '**/*.md'
       - '**/*.mdx'
-      - '.github/workflows/markdown-lint.yml'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - '**/*.json'
+      - '**/*.jsonc'
+      - '**/*.mjs'
+      - 'assets/logo/**/*.svg'
+      - 'assets/logo/src/**/*.svg'
+      - '.github/workflows/lint-and-format.yml'
       - '.markdownlint-cli2.jsonc'
       - '.prettierrc'
+      - 'bun.lock'
+      - 'lefthook.yml'
+      - 'package.json'
 
 jobs:
   lint:
@@ -46,3 +66,9 @@ jobs:
 
       - name: Lint Markdown with markdownlint
         run: bun run lint:md
+
+      - name: Check source SVG formatting
+        run: bun run format:svg:check
+
+      - name: Check optimized SVG outputs
+        run: bun run svg:optimize:check

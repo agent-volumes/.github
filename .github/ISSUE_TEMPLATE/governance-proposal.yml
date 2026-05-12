@@ -1,0 +1,32 @@
+name: Governance Proposal
+description: Propose changes to governance, TSC structure, or decision-making.
+title: '[GOVERNANCE]: '
+labels: ['type:governance', 'status:needs-triage', 'status:needs-tsc', 'area:governance']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template in `agent-volumes/.github` for governance process proposals while organization governance documents are maintained here.
+
+        Substantial governance changes require TSC review.
+  - type: checkboxes
+    id: governance-confirmation
+    attributes:
+      label: Governance confirmation
+      options:
+        - label: This proposal concerns organization governance, TSC process, charter process, or cross-repository community process.
+          required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal Description
+      description: Detailed description of the proposed governance change.
+    validations:
+      required: true
+  - type: textarea
+    id: rationale
+    attributes:
+      label: Rationale
+      description: Why is this change necessary for the organization?
+    validations:
+      required: true

@@ -4,13 +4,13 @@
 
 ## OVERVIEW
 
-Reusable and local CI workflows for security scanning, dependency review, and Markdown quality. Designed for org-wide consumption via `workflow_call`.
+Reusable and local CI workflows for security scanning, dependency review, and repository lint/format quality. Designed for org-wide consumption via `workflow_call`.
 
 ## WHERE TO LOOK
 
 | Workflow                  | File                             | Purpose                                 | Reusable |
 | ------------------------- | -------------------------------- | --------------------------------------- | -------- |
-| Markdown Lint             | `markdown-lint.yml`              | Lint/format checks on PR/push to `main` | No       |
+| Lint and Format           | `lint-and-format.yml`            | Lint/format checks on PR/push to `main` | No       |
 | OSV Scanner Smoke         | `osv-scanner-smoke.yml`          | Validates OSV integration in this repo  | No       |
 | OSV Scanner PR            | `osv-scanner-pr-reusable.yml`    | PR diff vulnerability scans             | Yes      |
 | OSV Scanner Full          | `osv-scanner-full-reusable.yml`  | Full repo vulnerability scans           | Yes      |
@@ -30,4 +30,4 @@ Reusable and local CI workflows for security scanning, dependency review, and Ma
 ## ANTI-PATTERNS
 
 - `osv-scanner-full-reusable.yml` line ~51: `continue-on-error: true` on the scanner step — can mask scan failures. Pair with `fail-on-vuln` downstream or remove.
-- Do not convert `markdown-lint.yml` to reusable — tightly coupled to this repo's Bun toolchain.
+- Do not convert `lint-and-format.yml` to reusable — tightly coupled to this repo's Bun toolchain.

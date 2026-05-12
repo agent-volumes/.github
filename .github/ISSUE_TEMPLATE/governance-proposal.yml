@@ -8,7 +8,7 @@ body:
       value: |
         Use this template in `agent-volumes/.github` for governance process proposals while organization governance documents are maintained here.
 
-        Substantial governance changes require TSC review.
+        Substantial governance changes require TSC review and Founder approval.
   - type: checkboxes
     id: governance-confirmation
     attributes:

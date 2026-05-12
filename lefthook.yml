@@ -18,7 +18,7 @@ pre-commit:
   parallel: true
   jobs:
     - name: Lint and format Markdown
-      glob: "*.{md,mdx}"
+      glob: '*.{md,mdx}'
       run: |
         set -e
         echo "🔍 Running markdownlint-cli2 --fix on staged files..."
@@ -29,8 +29,18 @@ pre-commit:
         git add {staged_files}
         echo "✅ Pre-commit checks completed!"
 
+    - name: Format config files
+      glob: '*.{yml,yaml,json,jsonc,mjs}'
+      run: |
+        set -e
+        echo "✨ Running prettier --write on staged config files..."
+        bunx prettier --write {staged_files}
+        echo "📦 Re-staging formatted config files..."
+        git add {staged_files}
+        echo "✅ Config formatting complete!"
+
     - name: Optimize SVG assets
-      glob: "assets/logo/src/**/*.svg"
+      glob: 'assets/logo/src/**/*.svg'
       run: |
         set -e
         echo "🧹 Formatting source SVG files for readability..."

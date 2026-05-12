@@ -1,14 +1,15 @@
 {
   "scripts": {
     "prepare": "bunx lefthook install",
+    "lint": "bun run lint:md && bun run format:check && bun run format:svg:check && bun run svg:optimize:check",
     "lint:md": "markdownlint-cli2 \"**/*.md\" \"**/*.mdx\"",
     "lint:md:fix": "markdownlint-cli2 --fix \"**/*.md\" \"**/*.mdx\"",
-    "format": "prettier --write \"**/*.md\"",
-    "format:check": "prettier --check \"**/*.md\"",
+    "format": "prettier --write \"**/*.{md,mdx,yml,yaml,json,jsonc,mjs}\" && bun run format:svg",
+    "format:check": "prettier --check \"**/*.{md,mdx,yml,yaml,json,jsonc,mjs}\"",
     "format:svg": "prettier --write \"assets/logo/src/**/*.svg\"",
     "format:svg:check": "prettier --check \"assets/logo/src/**/*.svg\"",
     "svg:optimize": "svgo -f assets/logo/src --recursive -o assets/logo --config=svgo.config.mjs",
-    "svg:optimize:check": "svgo assets/logo/src/banner/solid-bg/agent-volumes-logo-banner-with-bg-4-1.svg -o - --pretty --config=svgo.config.mjs"
+    "svg:optimize:check": "sh -c 'tmpdir=$(mktemp -d) && svgo -f assets/logo/src --recursive -o \"$tmpdir\" --config=svgo.config.mjs >/dev/null && diff -ru --exclude=\"*.png\" --exclude=\".DS_Store\" --exclude=\"src\" assets/logo \"$tmpdir\"'"
   },
   "dependencies": {},
   "devDependencies": {

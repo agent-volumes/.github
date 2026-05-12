@@ -51,7 +51,7 @@ Organization-wide `.github` repository for the Agent Volumes org. Contains no ru
 - **Package manager:** Bun (`bun install`, `bun run`, `bunx`)
 - **Pre-commit:** Lefthook (installed via `prepare` script; config in `lefthook.yml`)
 - **Markdown linting:** `markdownlint-cli2` with `.markdownlint-cli2.jsonc`
-- **Formatting:** Prettier with `.prettierrc` (default settings for Markdown)
+- **Formatting:** Prettier with `.prettierrc` for Markdown, YAML, JSON/JSONC, JavaScript config, and source SVGs
 - **CI:** GitHub Actions, Ubuntu-latest runners, Read-only permissions by default
 - **Action pinning:** All external actions pinned to commit SHA + comment with version tag
   - **Reusable workflows:** Internal reusables referenced by branch (`@main`) — **exception** to SHA-pinning rule (see README note)
@@ -59,7 +59,7 @@ Organization-wide `.github` repository for the Agent Volumes org. Contains no ru
 
 ## ANTI-PATTERNS (THIS PROJECT)
 
-- **Do not** make `markdown-lint.yml` reusable — it is tightly coupled to this repo's Bun/Prettier/markdownlint stack
+- **Do not** make `lint-and-format.yml` reusable — it is tightly coupled to this repo's Bun/Prettier/markdownlint/SVGO stack
 - **Do not** SHA-pin internal reusable workflows from this repo — Dependabot cannot update them; use `@main`
 - **Do not** leave `continue-on-error: true` on scanner steps without explicit justification — OSV full scanner currently has this (review before relying on it for security gating)
 - **Do not** add runtime code or `src/` — this is a docs/config repo, not a library
@@ -78,10 +78,11 @@ Organization-wide `.github` repository for the Agent Volumes org. Contains no ru
 bun install                    # Installs deps + lefthook pre-commit hooks
 
 # Lint / format
+bun run lint                  # Run all lint/format/SVG drift checks
 bun run lint:md               # Lint all Markdown files
 bun run lint:md:fix           # Lint and auto-fix
-bun run format                # Format with Prettier
-bun run format:check          # Check formatting without modifying
+bun run format                # Format docs, config, and source SVGs
+bun run format:check          # Check docs/config formatting without modifying
 
 # Pre-commit (manual)
 bunx lefthook run pre-commit

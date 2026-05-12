@@ -1,0 +1,26 @@
+name: Security Policy Question
+description: Ask non-sensitive questions about security policies or hardening.
+title: "[SECURITY-POLICY]: "
+labels: ["type:security", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### STOP! DO NOT REPORT VULNERABILITIES HERE.
+        If you have discovered a security vulnerability, please report it privately via the process in [SECURITY.md](https://github.com/agent-volumes/.github/blob/main/SECURITY.md).
+        **Public issues containing exploit details will be closed and removed from public view where possible.**
+  - type: checkboxes
+    id: security-confirmation
+    attributes:
+      label: Security confirmation
+      options:
+        - label: This is a non-sensitive policy question and does not include vulnerability details, proof-of-concept code, secrets, or unreleased advisory information.
+          required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Security Policy Question
+      description: What non-sensitive security question do you have?
+      placeholder: E.g., "How do I implement SLSA requirements for my new repo?"
+    validations:
+      required: true

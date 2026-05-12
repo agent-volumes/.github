@@ -17,9 +17,12 @@ Organization-wide `.github` repository for the Agent Volumes org. Contains no ru
 │   ├── CODEOWNERS
 │   ├── dependabot.yml
 │   ├── dependency-review-config.yml
+│   ├── ISSUE_TEMPLATE/     # Issue forms (routing, policy, governance)
 │   └── PULL_REQUEST_TEMPLATE.md
 ├── docs/
 │   ├── CODE_OF_CONDUCT.*.md   # Translations (ko, zh-cn, de, fr)
+│   ├── issue-routing.md       # Routing reference
+│   ├── labels.md              # Label taxonomy
 │   └── security/              # Security policy docs
 ├── assets/logo/            # Org branding (banners, square)
 ├── package.json            # Bun-based dev tooling only

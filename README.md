@@ -38,9 +38,20 @@ The Code of Conduct is available in multiple languages:
 
 ### Issue and PR Templates
 
-| Template              | Location                                                                 | Purpose                                                                                    |
-| --------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
-| Pull Request Template | [`.github/PULL_REQUEST_TEMPLATE.md`](./.github/PULL_REQUEST_TEMPLATE.md) | Standardized PR format with summary, change type, checklists for CI, testing, and security |
+| Template                   | Location                                                                                                           | Purpose                                                                                    |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------ |
+| Pull Request Template      | [`.github/PULL_REQUEST_TEMPLATE.md`](./.github/PULL_REQUEST_TEMPLATE.md)                                           | Standardized PR format with summary, change type, checklists for CI, testing, and security |
+| Routing Help               | [`.github/ISSUE_TEMPLATE/routing-help.yml`](./.github/ISSUE_TEMPLATE/routing-help.yml)                             | Help routing issues to the correct repository                                              |
+| Organization Policy Change | [`.github/ISSUE_TEMPLATE/organization-policy-change.yml`](./.github/ISSUE_TEMPLATE/organization-policy-change.yml) | Propose changes to organization-wide health files and policies                             |
+| Governance Proposal        | [`.github/ISSUE_TEMPLATE/governance-proposal.yml`](./.github/ISSUE_TEMPLATE/governance-proposal.yml)               | Propose changes to TSC structure or decision-making                                        |
+| Security Policy Question   | [`.github/ISSUE_TEMPLATE/security-policy-question.yml`](./.github/ISSUE_TEMPLATE/security-policy-question.yml)     | Ask non-sensitive security policy or hardening questions                                   |
+
+### Documentation
+
+| File                                               | Purpose                                         |
+| :------------------------------------------------- | :---------------------------------------------- |
+| [`docs/issue-routing.md`](./docs/issue-routing.md) | Detailed routing reference for the organization |
+| [`docs/labels.md`](./docs/labels.md)               | Canonical label taxonomy and status meanings    |
 
 ### CI/CD Workflows
 

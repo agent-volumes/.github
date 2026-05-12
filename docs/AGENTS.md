@@ -11,6 +11,8 @@ Translated community health files and security policy documentation.
 | Task                          | Location                                        |
 | ----------------------------- | ----------------------------------------------- |
 | Code of Conduct translations  | `CODE_OF_CONDUCT.<lang>.md` — ko, zh-cn, de, fr |
+| Issue routing reference       | `issue-routing.md`                              |
+| Label taxonomy                | `labels.md`                                     |
 | Dependency security guidance  | `security/dependency-security.md`               |
 | SLSA compliance framework     | `security/slsa-compliance-framework.md`         |
 | Workflow hardening guidelines | `security/workflow-hardening.md`                |

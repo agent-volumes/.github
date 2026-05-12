@@ -18,6 +18,8 @@ This is the organization's special `.github` repository — a [GitHub convention
 
 | File                                         | Purpose                                                                                | Scope             |
 | :------------------------------------------- | :------------------------------------------------------------------------------------- | :---------------- |
+| [`CHARTER.md`](./CHARTER.md)                 | Organization mission, scope, conformance boundary, and Founder/TSC authority           | Organization-wide |
+| [`GOVERNANCE.md`](./GOVERNANCE.md)           | Founder-led, TSC-first governance model, decision process, and role definitions        | Organization-wide |
 | [`CODE_OF_CONDUCT.md`](./CODE_OF_CONDUCT.md) | Contributor Covenant 3.0 — behavioral expectations for community participation         | Organization-wide |
 | [`CONTRIBUTING.md`](./CONTRIBUTING.md)       | Contribution guidelines: scope boundaries, process, RFC path, development expectations | Organization-wide |
 | [`SECURITY.md`](./SECURITY.md)               | Security policy: vulnerability reporting, SLSA compliance, supply chain integrity      | Organization-wide |
@@ -43,13 +45,14 @@ The Code of Conduct is available in multiple languages:
 | Pull Request Template      | [`.github/PULL_REQUEST_TEMPLATE.md`](./.github/PULL_REQUEST_TEMPLATE.md)                                           | Standardized PR format with summary, change type, checklists for CI, testing, and security |
 | Routing Help               | [`.github/ISSUE_TEMPLATE/routing-help.yml`](./.github/ISSUE_TEMPLATE/routing-help.yml)                             | Help routing issues to the correct repository                                              |
 | Organization Policy Change | [`.github/ISSUE_TEMPLATE/organization-policy-change.yml`](./.github/ISSUE_TEMPLATE/organization-policy-change.yml) | Propose changes to organization-wide health files and policies                             |
-| Governance Proposal        | [`.github/ISSUE_TEMPLATE/governance-proposal.yml`](./.github/ISSUE_TEMPLATE/governance-proposal.yml)               | Propose changes to TSC structure or decision-making                                        |
+| Governance Proposal        | [`.github/ISSUE_TEMPLATE/governance-proposal.yml`](./.github/ISSUE_TEMPLATE/governance-proposal.yml)               | Propose changes to Founder/TSC governance, participation, or decision-making               |
 | Security Policy Question   | [`.github/ISSUE_TEMPLATE/security-policy-question.yml`](./.github/ISSUE_TEMPLATE/security-policy-question.yml)     | Ask non-sensitive security policy or hardening questions                                   |
 
 ### Documentation
 
 | File                                               | Purpose                                         |
 | :------------------------------------------------- | :---------------------------------------------- |
+| [`profile/README.md`](./profile/README.md)         | Public GitHub organization profile and links    |
 | [`docs/issue-routing.md`](./docs/issue-routing.md) | Detailed routing reference for the organization |
 | [`docs/labels.md`](./docs/labels.md)               | Canonical label taxonomy and status meanings    |
 
@@ -71,6 +74,32 @@ GitHub automatically applies files from this repository to all other repositorie
 - **Default behavior**: If a repository doesn't have its own `CODE_OF_CONDUCT.md`, it will inherit the one from this repository.
 - **Override**: Individual repositories can override by adding their own version of any file.
 - **Visibility**: Files in this repository are visible across the organization via GitHub's UI (e.g., when creating issues or PRs).
+
+## Governance and Participation
+
+Agent Volumes is a Founder-led, TSC-first open specification project. The specification is vendor-neutral and
+implementation-agnostic, while organization governance is defined by this repository.
+
+Key governance documents:
+
+- [`CHARTER.md`](./CHARTER.md) — mission, scope, out-of-scope topics, conformance boundary, and Founder/TSC authority
+- [`GOVERNANCE.md`](./GOVERNANCE.md) — roles, TSC review, Founder approval, decision process, Working Groups, and amendments
+- [`CONTRIBUTING.md`](./CONTRIBUTING.md) — contribution routing, DCO sign-off, specification change process, and participation paths
+- [`docs/issue-routing.md`](./docs/issue-routing.md) — where to file specification, governance, security, and implementation issues
+
+Common participation paths:
+
+| If you want to...                                      | Start here                                                                                          |
+| :----------------------------------------------------- | :-------------------------------------------------------------------------------------------------- |
+| Propose a specification change                         | [`agent-volumes/agent-volumes-spec`](https://github.com/agent-volumes/agent-volumes-spec)           |
+| Build a compatible runtime, client, registry, or tool  | [Implementers Guide](https://github.com/agent-volumes/agent-volumes-spec/blob/main/IMPLEMENTERS.md) |
+| List your organization as using or evaluating the spec | [ADOPTERS.md](https://github.com/agent-volumes/agent-volumes-spec/blob/main/ADOPTERS.md)            |
+| Ask about TSC participation or governance              | [Governance Proposal](./.github/ISSUE_TEMPLATE/governance-proposal.yml) issue form                  |
+| Propose organization-wide policy or template changes   | [Organization Policy Change](./.github/ISSUE_TEMPLATE/organization-policy-change.yml) form          |
+
+> [!NOTE]
+> `ADOPTERS.md` is for organizations and projects using or evaluating Agent Volumes. It is not a certification,
+> trademark grant, compatibility badge, or hosted-service approval.
 
 ## Reusable Workflows
 

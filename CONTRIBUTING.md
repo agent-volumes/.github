@@ -1,6 +1,6 @@
-# Contributing to the Agent Volumes Specification
+# Contributing to Agent Volumes
 
-Thank you for your interest in contributing to the Agent Volumes specification. This document explains how to participate in specification development.
+Thank you for your interest in contributing to Agent Volumes. This document explains how to route issues and pull requests across the organization, and how to participate in specification development.
 
 ## Ways to Contribute
 
@@ -11,6 +11,21 @@ The most valuable contribution during the draft phase is **specification feedbac
 - Open a [GitHub Issue](https://github.com/agent-volumes/agent-volumes-spec/issues) to report problems, ambiguities, or gaps in the specification
 - Start a [GitHub Discussion](https://github.com/agent-volumes/agent-volumes-spec/discussions) for open-ended design questions
 - Comment on existing issues and pull requests
+
+### Repository Routing
+
+Correct issue routing ensures your feedback reaches the right maintainers.
+
+- **Specification bugs and proposals**: Open an issue in the [`agent-volumes-spec`](https://github.com/agent-volumes/agent-volumes-spec/issues) repository.
+- **Organization policy and governance**: Open an issue in this [`.github`](https://github.com/agent-volumes/.github/issues) repository.
+- **Implementation bugs**: Open an issue in the affected implementation repository, such as `shelf` or `alexandria` when those repositories are available.
+- **Unsure where to go?** Use the **Routing Help** template in this repository.
+- **Security vulnerabilities**: Do not open public issues. Follow the [security policy](SECURITY.md).
+
+For a detailed routing reference and label definitions, see:
+
+- [`docs/issue-routing.md`](./docs/issue-routing.md)
+- [`docs/labels.md`](./docs/labels.md)
 
 ### Specification Changes
 

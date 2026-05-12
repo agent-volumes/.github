@@ -12,12 +12,29 @@ The most valuable contribution during the draft phase is **specification feedbac
 - Start a [GitHub Discussion](https://github.com/agent-volumes/agent-volumes-spec/discussions) for open-ended design questions
 - Comment on existing issues and pull requests
 
+### Implementation, Adoption, and Organization Participation
+
+Agent Volumes welcomes both individual and organizational participation:
+
+- **Implementers** building compatible runtimes, clients, registries, packaging tools, or validators should start with the
+  [Implementers Guide](https://github.com/agent-volumes/agent-volumes-spec/blob/main/IMPLEMENTERS.md).
+- **Adopters and evaluators** may list their organization or project in
+  [ADOPTERS.md](https://github.com/agent-volumes/agent-volumes-spec/blob/main/ADOPTERS.md) by opening a pull request or
+  issue in the specification repository.
+- **Organizations interested in TSC, Working Group, or future member-company participation** should open a governance
+  discussion or issue in [`agent-volumes/.github`](https://github.com/agent-volumes/.github/issues/new/choose).
+
+Adopter listings and implementation feedback help prioritize the specification, but they do not create certification,
+trademark authorization, hosted-service approval, or special normative status.
+
 ### Repository Routing
 
 Correct issue routing ensures your feedback reaches the right maintainers.
 
 - **Specification bugs and proposals**: Open an issue in the [`agent-volumes-spec`](https://github.com/agent-volumes/agent-volumes-spec/issues) repository.
 - **Organization policy and governance**: Open an issue in this [`.github`](https://github.com/agent-volumes/.github/issues) repository.
+- **TSC, Working Group, or future member-company participation**: Use the **Governance Proposal** template in this repository.
+- **Adopter listing requests**: Open a pull request or issue against [`ADOPTERS.md`](https://github.com/agent-volumes/agent-volumes-spec/blob/main/ADOPTERS.md).
 - **Implementation bugs**: Open an issue in the affected implementation repository, such as `shelf` or `alexandria` when those repositories are available.
 - **Unsure where to go?** Use the **Routing Help** template in this repository.
 - **Security vulnerabilities**: Do not open public issues. Follow the [security policy](SECURITY.md).
@@ -100,7 +117,16 @@ When editing the specification:
 
 ## Governance
 
-Specification development is guided by the Technical Steering Committee (TSC). For governance details, including decision-making processes and membership, see the [project governance documentation](https://github.com/agent-volumes/.github/blob/main/GOVERNANCE.md).
+Agent Volumes uses a Founder-led, TSC-first governance model. The Technical Steering Committee (TSC) is the primary
+deliberative and technical review body, and material technical or governance decisions require Founder approval.
+
+For details, see:
+
+- [Agent Volumes Charter](https://github.com/agent-volumes/.github/blob/main/CHARTER.md)
+- [Agent Volumes Governance](https://github.com/agent-volumes/.github/blob/main/GOVERNANCE.md)
+
+Use this repository's Governance Proposal issue form for questions about TSC participation, Working Groups, governance
+process changes, or future member-company participation.
 
 ## Code of Conduct
 

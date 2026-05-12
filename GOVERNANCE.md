@@ -3,14 +3,17 @@
 This document describes how the Agent Volumes Organization makes decisions, manages roles, reviews changes, and records
 technical direction under the [Agent Volumes Charter](CHARTER.md).
 
-Agent Volumes currently uses a provisional TSC plus maintainer model. It is intended to be lightweight enough for an
+Agent Volumes currently uses a Founder-led, TSC-first governance model. It is intended to be lightweight enough for an
 early open specification project while giving contributors a clear, vendor-neutral standards process.
 
 ## 1. Principles
 
 - **Open participation.** Anyone may open issues, join discussions, submit pull requests, and review proposals.
 - **Vendor neutrality.** No runtime, registry, vendor, hosted service, or downstream implementation defines the standard.
-- **Consensus seeking.** Decisions should be made by rough consensus whenever possible, with voting used as a fallback.
+- **Consensus seeking.** Decisions should be developed through rough consensus whenever possible, with voting used as a
+  fallback.
+- **Founder final approval.** [Yunseo Kim](https://github.com/yunseo-kim), the Founder and Project Lead, has final approval authority for material
+  technical and governance decisions.
 - **Recorded decisions.** Material decisions should be recorded in issues, pull requests, ADRs, release notes, or meeting
   notes.
 - **Normative clarity.** Normative requirements belong in the specification and companion artifacts, not in reference
@@ -54,8 +57,8 @@ Editors are responsible for:
 
 ### TSC Member
 
-TSC members are responsible for specification direction and governance decisions. During the provisional phase, TSC
-members may be founder-appointed or confirmed by the existing TSC.
+TSC members are responsible for specification direction, governance deliberation, and recommendations. During the
+provisional phase, TSC members may be appointed by [Yunseo Kim](https://github.com/yunseo-kim) as Founder or confirmed by the existing TSC.
 
 TSC members are responsible for:
 
@@ -65,13 +68,29 @@ TSC members are responsible for:
 - Reviewing release readiness for material specification milestones
 - Guarding against vendor capture and implementation-specific requirements
 
+### Founder and Project Lead
+
+[Yunseo Kim](https://github.com/yunseo-kim) is the Founder and Project Lead for Agent Volumes.
+
+The Founder is responsible for:
+
+- Providing final approval for material technical and governance decisions
+- Placing proposals before the TSC for review, discussion, and vote
+- Proposing amendments, counterproposals, or revisions to TSC decisions
+- Requesting reconsideration of TSC decisions
+- Vetoing material TSC decisions with a public written explanation
+
+The Founder should use these reserved powers to protect the long-term architectural integrity, interoperability goals,
+mission, and governance commitments of Agent Volumes. Founder authority should not be used to give special normative
+status to any Windlass-maintained implementation or hosted service.
+
 ## 3. Provisional Technical Steering Committee
 
 The current TSC is provisional.
 
-| Name                                        | Affiliation | Role              | Since    |
-| :------------------------------------------ | :---------- | :---------------- | :------- |
-| [Yunseo Kim](https://github.com/yunseo-kim) | Windlass    | Provisional Chair | 12026 HE |
+| Name                                        | Affiliation | Role                          | Since    |
+| :------------------------------------------ | :---------- | :---------------------------- | :------- |
+| [Yunseo Kim](https://github.com/yunseo-kim) | Windlass    | Founder and Provisional Chair | 12026 HE |
 
 The project should seek a TSC of 3-5 members as participation grows. The TSC should make a best-effort attempt to avoid
 single-company or single-implementation dominance, but the initial phase may not yet have enough contributors to enforce
@@ -97,7 +116,8 @@ The TSC confirms maintainer changes by consensus or fallback vote.
 
 ## 5. Decision Process
 
-Agent Volumes uses public discussion and rough consensus as the default decision process.
+Agent Volumes uses public discussion and rough consensus as the default decision process. Material technical and
+governance decisions become final only after Founder approval.
 
 The normal path is:
 
@@ -107,13 +127,14 @@ The normal path is:
    affecting.
 4. Normative and governance-affecting changes are made visible to the TSC with `status:needs-tsc` or an equivalent
    agenda marker.
-5. If technical objections are resolved or sufficiently answered, a maintainer or TSC member records the decision.
+5. If technical objections are resolved or sufficiently answered, the TSC records a consensus decision or recommendation.
 6. If consensus cannot be reached, the TSC may call a fallback vote.
+7. Material decisions are submitted to the Founder for approval, revision request, reconsideration request, or veto.
 
 For material normative changes, the review period should be at least 7 calendar days unless the TSC records an urgent
 reason to shorten it. Charter amendments require the longer review period defined in [CHARTER.md](CHARTER.md).
 
-### Fallback Voting
+### Fallback Voting and Founder Approval
 
 Voting is a fallback, not the normal path.
 
@@ -122,10 +143,14 @@ Voting is a fallback, not the normal path.
 - Charter amendments require a two-thirds supermajority of voting TSC members.
 - Quorum requires two-thirds of current TSC members.
 - Abstentions count for quorum but not for or against the decision.
-- Vote outcomes must be recorded in the relevant issue, pull request, ADR, release note, or meeting note.
+- Vote outcomes and Founder approval outcomes must be recorded in the relevant issue, pull request, ADR, release note, or
+  meeting note.
 
 When the TSC has fewer than three members, the provisional chair should prefer public consensus and documented review
 periods over formal votes whenever possible.
+
+The Founder may approve, veto, request reconsideration, or propose revisions to a TSC decision. A veto or reconsideration
+request must include a public written explanation unless the matter is security-sensitive under [SECURITY.md](SECURITY.md).
 
 ## 6. Change Categories
 
@@ -133,11 +158,11 @@ periods over formal votes whenever possible.
 | :-------------------------- | :------------------------------------------- | :---------------------------------------------------------------------------------------- |
 | Editorial                   | Typos, grammar, links, formatting            | Maintainer review                                                                         |
 | Non-normative clarification | Examples, explanatory notes, guidance        | Maintainer review and public pull request                                                 |
-| Normative prose             | MUST, SHOULD, MAY, protocol behavior         | Public issue or discussion, TSC-visible review, recorded decision                         |
-| Schema or OpenAPI           | Validation rules, API contracts              | Normative prose lockstep, affected fixtures or examples checked, TSC-visible review       |
-| Conformance fixture         | Test vectors, reports, expected outcomes     | Requirement traceability, coverage review, TSC-visible review                             |
+| Normative prose             | MUST, SHOULD, MAY, protocol behavior         | Public issue or discussion, TSC-visible review, Founder approval, recorded decision       |
+| Schema or OpenAPI           | Validation rules, API contracts              | Normative prose lockstep, affected fixtures or examples checked, Founder approval         |
+| Conformance fixture         | Test vectors, reports, expected outcomes     | Requirement traceability, coverage review, Founder approval                               |
 | Security-sensitive          | Vulnerability handling, trust model, secrets | Private path allowed under [SECURITY.md](SECURITY.md), public record when safe            |
-| Governance                  | Charter, TSC, role, voting, repository home  | Public governance proposal, review window, TSC approval                                   |
+| Governance                  | Charter, TSC, role, voting, repository home  | Public governance proposal, review window, TSC recommendation, Founder approval           |
 | Implementation-local        | Runtime behavior, registry operations        | Route to the owning implementation unless it exposes a specification interoperability gap |
 
 Material schema, OpenAPI, or conformance fixture changes are normative when they change what an implementation must do
@@ -151,7 +176,7 @@ Minimum review expectations:
 
 - Editorial changes require one maintainer approval.
 - Non-normative clarifications require one maintainer approval and passing checks.
-- Normative changes require TSC-visible review before merge.
+- Normative changes require TSC-visible review and Founder approval before merge.
 - Schema, OpenAPI, and conformance fixture changes require prose alignment checks.
 - Security-sensitive changes must follow the private reporting path when public discussion would increase risk.
 - Governance changes require the public review period and approval rules in this document and [CHARTER.md](CHARTER.md).
@@ -174,7 +199,7 @@ Before a material specification release, the release shepherd should verify:
 - Changelog or release notes summarize normative changes
 
 Draft releases may be incomplete and may contain breaking changes. Stable releases should avoid breaking changes except
-through a documented compatibility process approved by the TSC.
+through a documented compatibility process reviewed by the TSC and approved by the Founder.
 
 ## 9. Working Groups
 
@@ -186,18 +211,18 @@ A Working Group should have:
 - A public charter or issue describing scope
 - Named facilitators or editors
 - A public discussion path
-- Clear handoff rules for proposals that need TSC approval
+- Clear handoff rules for proposals that need TSC review and Founder approval
 
-Working Groups may make recommendations, but they do not override the TSC or the published specification.
+Working Groups may make recommendations, but they do not override the TSC, the Founder, or the published specification.
 
 ## 10. Conflict of Interest
 
 Participants should disclose material conflicts when a decision could directly affect their employer, company, product,
 or implementation.
 
-TSC members and maintainers should not use their role to give special status to any vendor, hosted service, registry,
-runtime, or Windlass-maintained implementation. Implementation experience is valuable evidence, but it is not normative
-authority.
+The Founder, TSC members, and maintainers should not use their role to give special status to any vendor, hosted service,
+registry, runtime, or Windlass-maintained implementation. Implementation experience is valuable evidence, but it is not
+normative authority.
 
 If a conflict could reasonably affect trust in a decision, the affected participant should disclose it and may abstain
 from fallback votes.
@@ -218,8 +243,9 @@ Changes to this document require:
 
 1. A public proposal or pull request
 2. A review period of at least 7 calendar days for material changes
-3. TSC approval by consensus or fallback vote
-4. A recorded decision
+3. TSC recommendation by consensus or fallback vote
+4. Founder approval
+5. A recorded decision
 
 Changes that modify the charter must follow the amendment process in [CHARTER.md](CHARTER.md).
 

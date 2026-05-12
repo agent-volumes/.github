@@ -2,9 +2,9 @@
 
 This charter defines the mission, scope, authority, and boundaries of the Agent Volumes Organization.
 
-Agent Volumes begins as a lightweight open specification project governed by a provisional **Technical Steering Committee
-(TSC)**. The project may adopt a more formal governance home, foundation relationship, trademark policy, or certification
-program later, but none is created by this charter.
+Agent Volumes begins as a lightweight open specification project led by its Founder, [Yunseo Kim](https://github.com/yunseo-kim), and advised by a
+provisional **Technical Steering Committee (TSC)**. The project may adopt a more formal governance home, foundation
+relationship, trademark policy, or certification program later, but none is created by this charter.
 
 ## 1. Mission
 
@@ -50,7 +50,7 @@ through the governance process and incorporated into the published specification
 ## 4. Governance Authority
 
 The normative authority for Agent Volumes is the published specification and companion artifacts approved through the
-Agent Volumes governance process.
+Agent Volumes governance process, including the final approval of the Founder.
 
 The organization operates in public by default. Proposals, pull requests, design discussions, ADRs, and release notes
 should be visible in public repositories unless a security issue requires private handling under [SECURITY.md](SECURITY.md).
@@ -58,15 +58,27 @@ should be visible in public repositories unless a security issue requires privat
 This charter does not create a legal standards body, foundation membership program, trademark license, certification
 authority, or commercial approval process.
 
-## 5. Technical Steering Committee
+## 5. Founder and Technical Steering Committee
 
-The Technical Steering Committee (TSC) is the project's specification authority. During the early project phase, it is a
-Provisional Technical Steering Committee.
+[Yunseo Kim](https://github.com/yunseo-kim) is the Founder and Project Lead for Agent Volumes. The Founder serves as the final approval authority and the
+court of final appeal for specification direction, governance interpretation, and unresolved technical disputes.
+
+The Technical Steering Committee (TSC) is the project's primary deliberative and technical review body. During the early
+project phase, it is a Provisional Technical Steering Committee.
+
+The Founder is responsible for:
+
+- Providing final approval for normative specification changes and material releases
+- Placing technical or governance matters before the TSC for public deliberation
+- Proposing amendments, counterproposals, or revisions for TSC review
+- Requesting reconsideration of TSC decisions when the Founder believes the decision conflicts with the project mission,
+  architectural direction, interoperability goals, or governance commitments
+- Vetoing material TSC decisions with a public written explanation
 
 The TSC is responsible for:
 
 - Maintaining the technical scope and roadmap of the Agent Volumes Specification
-- Approving normative specification changes
+- Reviewing normative specification changes and recommending approval, rejection, or revision
 - Ensuring schemas, OpenAPI definitions, conformance fixtures, and prose requirements remain aligned
 - Reviewing and accepting ADRs that affect normative behavior or long-term architecture
 - Resolving technical disputes that cannot be resolved by consensus
@@ -76,7 +88,8 @@ The TSC is responsible for:
 The TSC should seek diverse participation from independent contributors, runtime implementers, registry operators,
 security practitioners, package-management maintainers, and organizations evaluating or implementing the specification.
 During the provisional phase, diversity is a goal and best-effort constraint, not a claim that vendor diversity already
-exists.
+exists. TSC participation does not transfer the Founder's final approval authority unless this charter is amended to say
+so explicitly.
 
 ## 6. Relationship to Implementations
 
@@ -86,7 +99,7 @@ standard.
 Windlass-maintained implementations, including projects such as `shelf` or Alexandria, may provide implementation
 experience and feedback, but they are not the normative authority for the Agent Volumes Specification. The normative
 authority remains the published specification and companion artifacts approved through the Agent Volumes governance
-process.
+process, including Founder approval.
 
 Reference implementations, examples, fixtures, and tools should be treated as non-normative unless a specification
 section explicitly incorporates their behavior as a normative requirement.
@@ -132,8 +145,9 @@ Charter amendments require:
 
 1. A public proposal in `agent-volumes/.github` while governance documents are maintained here
 2. A review period of at least 14 calendar days
-3. TSC approval by two-thirds of voting TSC members, with quorum as defined in [GOVERNANCE.md](GOVERNANCE.md)
-4. A recorded decision in the issue, pull request, ADR, or release note associated with the amendment
+3. TSC recommendation by two-thirds of voting TSC members, with quorum as defined in [GOVERNANCE.md](GOVERNANCE.md)
+4. Founder approval
+5. A recorded decision in the issue, pull request, ADR, or release note associated with the amendment
 
 Editorial corrections that do not change governance meaning may be approved through the routine maintainer process.
 

@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Specification Issues
+    url: https://github.com/agent-volumes/agent-volumes-spec/issues/new/choose
+    about: Report bugs or propose changes to the Agent Volumes specification.
+  - name: Security Vulnerabilities
+    url: https://github.com/agent-volumes/.github/security/policy
+    about: Do not open public issues for vulnerabilities. Follow the security policy.
+  - name: Governance Discussions
+    url: https://github.com/agent-volumes/.github/discussions
+    about: Start a discussion about organization governance or strategy.

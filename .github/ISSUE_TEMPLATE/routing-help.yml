@@ -1,0 +1,39 @@
+name: Routing Help
+description: Unsure where to open an issue? Ask for routing guidance here.
+title: "[ROUTING]: "
+labels: ["type:question", "status:needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for wanting to contribute! This organization-wide default form is for routing questions that belong in `agent-volumes/.github`.
+
+        If the repository you are viewing has its own local issue template, prefer that local template first.
+  - type: checkboxes
+    id: routing-confirmation
+    attributes:
+      label: Routing confirmation
+      options:
+        - label: I am using this form because I need help choosing the right Agent Volumes repository.
+          required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Topic Description
+      description: What is the issue or proposal about?
+      placeholder: I have a question about...
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Related Area
+      description: Which part of the project does this most closely relate to?
+      options:
+        - Specification text
+        - Implementation requirements
+        - Organization policy
+        - Security policy
+        - Other / Unsure
+    validations:
+      required: true

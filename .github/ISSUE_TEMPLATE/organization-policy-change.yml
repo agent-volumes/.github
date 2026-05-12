@@ -1,7 +1,7 @@
 name: Organization Policy Change
 description: Propose changes to organization-wide policies or health files.
-title: "[POLICY]: "
-labels: ["type:proposal", "status:needs-triage", "area:policy"]
+title: '[POLICY]: '
+labels: ['type:proposal', 'status:needs-triage', 'area:policy']
 body:
   - type: markdown
     attributes:

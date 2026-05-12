@@ -1,7 +1,7 @@
 name: Routing Help
 description: Unsure where to open an issue? Ask for routing guidance here.
-title: "[ROUTING]: "
-labels: ["type:question", "status:needs-triage"]
+title: '[ROUTING]: '
+labels: ['type:question', 'status:needs-triage']
 body:
   - type: markdown
     attributes:

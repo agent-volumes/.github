@@ -1,7 +1,7 @@
 name: Security Policy Question
 description: Ask non-sensitive questions about security policies or hardening.
-title: "[SECURITY-POLICY]: "
-labels: ["type:security", "status:needs-triage"]
+title: '[SECURITY-POLICY]: '
+labels: ['type:security', 'status:needs-triage']
 body:
   - type: markdown
     attributes:

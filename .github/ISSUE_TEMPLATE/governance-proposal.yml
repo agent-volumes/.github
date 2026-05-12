@@ -1,7 +1,7 @@
 name: Governance Proposal
 description: Propose changes to governance, TSC structure, or decision-making.
-title: "[GOVERNANCE]: "
-labels: ["type:governance", "status:needs-triage", "status:needs-tsc", "area:governance"]
+title: '[GOVERNANCE]: '
+labels: ['type:governance', 'status:needs-triage', 'status:needs-tsc', 'area:governance']
 body:
   - type: markdown
     attributes:

@@ -18,11 +18,9 @@ implementation-agnostic: no runtime, registry, hosted service, vendor, or downst
 
 ## Projects
 
-| Project                                                                            | Description                                                                | Status        |
-| :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------- | :------------ |
-| [Agent Volumes Specification](https://github.com/agent-volumes/agent-volumes-spec) | Packaging, distribution, and verification standard for AI agent components | Working Draft |
-
-Reference implementations provide implementation feedback, but they are not the normative authority for the standard.
+| Project                                                                            | Description                                                                | Status            |
+| :--------------------------------------------------------------------------------- | :------------------------------------------------------------------------- | :---------------- |
+| [Agent Volumes Specification](https://github.com/agent-volumes/agent-volumes-spec) | Packaging, distribution, and verification standard for AI agent components | Release Candidate |
 
 ## Governance
 

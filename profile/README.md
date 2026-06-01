@@ -1,4 +1,13 @@
-# Agent Volumes Organization
+<div align="center">
+
+# The Agent Volumes Organization
+
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-3.0-4baaaa.svg)](https://github.com/agent-volumes/.github/blob/main/CODE_OF_CONDUCT.md)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fdocs.agentvolumes.org%2F&logo=mintlify&label=docs.agentvolumes.org&style=flat-square)](https://docs.agentvolumes.org/)
+[![Bluesky Badge](https://img.shields.io/badge/-%40agentvolumes.org-1185FE?style=flat-square&logo=bluesky&logoColor=white&link=https://bsky.app/profile/agentvolumes.org/)](https://bsky.app/profile/agentvolumes.org/)
+[![X Follow](https://img.shields.io/twitter/follow/agentvolumes?label=%40AgentVolumes&logo=x&style=flat-square&labelColor=000000)](https://x.com/agentvolumes)
+
+</div>
 
 The Agent Volumes Organization develops open specifications for packaging, distributing, and verifying AI agent
 components across runtimes, registries, package managers, and developer tools.

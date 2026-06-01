@@ -1,6 +1,10 @@
-# .github
+<div align="center">
 
 ![The Agent Volumes Organization Logo](./assets/logo/banner/solid-bg/agent-volumes-logo-banner-with-bg-4-1.svg)
+
+[![Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-97ca00)](LICENSE)
+[![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-3.0-4baaaa.svg)](https://github.com/agent-volumes/.github/blob/main/CODE_OF_CONDUCT.md)
+[![GitHub issues](https://img.shields.io/badge/issue_tracking-GitHub-blue.svg)](https://github.com/agent-volumes/.github/issues)
 
 [![Repository Lint and Format](https://github.com/agent-volumes/.github/actions/workflows/lint-and-format.yml/badge.svg)](https://github.com/agent-volumes/.github/actions/workflows/lint-and-format.yml)
 [![CodeQL](https://github.com/agent-volumes/.github/actions/workflows/github-code-scanning/codeql/badge.svg)](https://github.com/agent-volumes/.github/actions/workflows/github-code-scanning/codeql)
@@ -8,9 +12,16 @@
 [![OSV Scanner Smoke](https://github.com/agent-volumes/.github/actions/workflows/osv-scanner-smoke.yml/badge.svg)](https://github.com/agent-volumes/.github/actions/workflows/osv-scanner-smoke.yml)
 [![OpenSSF Scorecard](https://api.scorecard.dev/projects/github.com/agent-volumes/.github/badge)](https://scorecard.dev/viewer/?uri=github.com/agent-volumes/.github)
 
+[![Bluesky Badge](https://img.shields.io/badge/-%40agentvolumes.org-1185FE?style=flat-square&logo=bluesky&logoColor=white&link=https://bsky.app/profile/agentvolumes.org/)](https://bsky.app/profile/agentvolumes.org/)
+[![X Follow](https://img.shields.io/twitter/follow/agentvolumes?label=%40AgentVolumes&logo=x&style=flat-square&labelColor=000000)](https://x.com/agentvolumes)
+
 Centralized documents and information for the Agent Volumes Organization and its projects.
 
 This is the organization's special `.github` repository — a [GitHub convention](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file) that automatically applies its files across all repositories in the Agent Volumes Organization that don't have their own versions.
+
+</div>
+
+# .github
 
 ## Repository Contents
 

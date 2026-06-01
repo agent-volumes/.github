@@ -1,4 +1,4 @@
-# .github
+<div align="center">
 
 ![The Agent Volumes Organization Logo](./assets/logo/banner/solid-bg/agent-volumes-logo-banner-with-bg-4-1.svg)
 
@@ -18,6 +18,10 @@
 Centralized documents and information for the Agent Volumes Organization and its projects.
 
 This is the organization's special `.github` repository — a [GitHub convention](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file) that automatically applies its files across all repositories in the Agent Volumes Organization that don't have their own versions.
+
+</div>
+
+# .github
 
 ## Repository Contents
 

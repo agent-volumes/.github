@@ -49,7 +49,7 @@ Acordamos restringir los siguientes comportamientos en nuestra comunidad. Las in
 
 Pueden surgir tensiones entre miembros de la comunidad incluso cuando todos hacen su mejor esfuerzo por colaborar. No todo conflicto representa una violación al código de conducta. Este Código refuerza conductas y normas que pueden ayudar a prevenirlos y minimizar el daño.
 
-Cuando ocurra un incidente, es importante reportarlo a la brevedad. Para reportar una posible infracción, **envíe un correo electrónico a <conduct@agentvolumes.org>**.
+Cuando ocurra un incidente, es importante reportarlo a la brevedad. Para reportar una posible infracción, **envíe un correo electrónico a [conduct@agentvolumes.org](mailto:conduct@agentvolumes.org)**.
 
 Las personas moderadoras toman los reportes de violaciones con seriedad y harán su mejor esfuerzo por responder oportunamente. Se investigarán todos los reportes, revisando mensajes, registros y grabaciones, o entrevistando a testigos y demás participantes. El equipo moderador mantendrán las investigaciones y acciones lo más transparentes posible, priorizando siempre la seguridad y la confidencialidad. Para respetar estos valores, las acciones se llevan a cabo de manera privada con las partes involucradas, aunque comunicarlo a toda la comunidad puede ser parte de una resolución acordada por ambas partes.
 

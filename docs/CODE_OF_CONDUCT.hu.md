@@ -49,7 +49,7 @@ Közösségünkben az alábbi magatartásformák nem megengedettek. E magatartá
 
 A közösség tagjai között akkor is kialakulhat feszültség, amikor mindenki a lehető legjobb szándékkal törekszik az együttműködésre. Nem minden konfliktus minősül a Magatartási kódex megsértésének, és ez a Magatartási kódex megerősíti azokat a javasolt magatartásformákat és normákat, amelyek segíthetnek a konfliktusok elkerülésében és a sérelmek mérséklésében.
 
-Ha mégis incidens történik, fontos annak haladéktalan bejelentése. Lehetséges szabálysértés bejelentéséhez **küldjön egy e-mailt a [conduct@agentvolumes.org](mailto:conduct@agentvolumes.org)** címre.
+Ha mégis incidens történik, fontos annak haladéktalan bejelentése. Lehetséges szabálysértés bejelentéséhez **küldjön e-mailt az [conduct@agentvolumes.org](mailto:conduct@agentvolumes.org)** címre.
 
 A közösségi moderátorok komolyan veszik a szabálysértésekről szóló bejelentéseket, és mindent megtesznek azért, hogy azokra kellő időben reagáljanak. A Magatartási kódex megsértésére vonatkozó valamennyi bejelentést kivizsgálják: áttekintik az üzeneteket, naplókat és felvételeket, illetve szükség esetén tanúkat és más résztvevőket is meghallgatnak. A közösségi moderátorok a vizsgálatot és a szabályérvényesítési intézkedéseket a lehető legátláthatóbban kezelik, miközben elsőbbséget biztosítanak a biztonságnak és a bizalmas kezelésnek. Ezen elvek érvényesítése érdekében az intézkedésekre az érintett felekkel, nem nyilvános módon kerül sor, ugyanakkor a teljes közösség tájékoztatása is része lehet egy közös megegyezéssel kialakított rendezésnek.
 

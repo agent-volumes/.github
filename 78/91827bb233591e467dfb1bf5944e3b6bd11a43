@@ -1,0 +1,14 @@
+.github/workflows/osv-scanner-full-reusable.yml
+  h_495200fbbeca45 69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "7891827bb233591e467dfb1bf5944e3b6bd11a43",
+  "prompts": {},
+  "humans": {
+    "h_495200fbbeca45": {
+      "author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

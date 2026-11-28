@@ -1,0 +1,23 @@
+.github/workflows/AGENTS.md
+  s_bbbc364fc842e0::t_3ee29d0b96eeec 7-8,25-34,38-39
+AGENTS.md
+  s_bbbc364fc842e0::t_ffc2469c1f6659 3,7-10,55-56,59-63,67-72,77-84
+docs/AGENTS.md
+  s_bbbc364fc842e0::t_58248219279489 23-24
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e58cf43b476ba84cb64ac6091949e8aef67069dc",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

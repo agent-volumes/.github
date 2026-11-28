@@ -1,0 +1,21 @@
+docs/issue-routing.md
+  s_bbbc364fc842e0::t_6a9636671ba6af 3-5,11-12,43-44,67-69,107-108,112-114,125-126,132-134,140-141,145-146,148-149
+docs/labels.md
+  s_bbbc364fc842e0::t_d11f07cf99b758 3-5,7-8,12-13,48-49,62-63,81-82,97-98
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8bba6ce4e849faa01c936689462d98d4ee1a9033",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

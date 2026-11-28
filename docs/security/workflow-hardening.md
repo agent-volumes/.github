@@ -1,13 +1,15 @@
 # Workflow Hardening
 
-> [!NOTE]
-> This page is part of the Agent Volumes Organization security policy. Start with [SECURITY.md](../../SECURITY.md).
+> [!NOTE] This page is part of the Agent Volumes Organization security policy. Start with
+> [SECURITY.md](../../SECURITY.md).
 
 All GitHub Actions workflows enforce supply-chain protections:
 
 ## Action References
 
-- **SHA-pinned actions** — Every `uses:` reference is pinned to the full 40-character commit SHA (not a mutable tag like `@v4`). This prevents supply-chain attacks where a tag is silently repointed to a compromised commit. Dependabot keeps SHAs up to date automatically via weekly PRs.
+- **SHA-pinned actions** — Every `uses:` reference is pinned to the full 40-character commit SHA
+  (not a mutable tag like `@v4`). This prevents supply-chain attacks where a tag is silently
+  repointed to a compromised commit. Dependabot keeps SHAs up to date automatically via weekly PRs.
 
   Example:
 
@@ -19,20 +21,30 @@ All GitHub Actions workflows enforce supply-chain protections:
   - uses: actions/checkout@v6
   ```
 
-> [!NOTE] Exception for internal reusable workflows
-> Reusable workflows published from `agent-volumes/.github` should be referenced by branch name (e.g., `@main`) instead of a commit SHA. This repository does not maintain semantic version tags, and Dependabot cannot propose updates for SHA-pinned references to internal reusable workflows. Adding tags or introducing an additional automation tool solely for this purpose would create more operational overhead than value. This exception applies only to the AVO-owned reusable workflows in this repository.
+> [!NOTE] Exception for internal reusable workflows Reusable workflows published from
+> `agent-volumes/.github` should be referenced by branch name (e.g., `@main`) instead of a commit
+> SHA. This repository does not maintain semantic version tags, and Dependabot cannot propose
+> updates for SHA-pinned references to internal reusable workflows. Adding tags or introducing an
+> additional automation tool solely for this purpose would create more operational overhead than
+> value. This exception applies only to the AVO-owned reusable workflows in this repository.
 
 ## Runner Security
 
-- **Harden-runner** — Every job starts with [`step-security/harden-runner`](https://github.com/step-security/harden-runner) in audit mode (`egress-policy: audit`), logging all outbound network calls. This provides visibility into unexpected egress from CI runners.
+- **Harden-runner** — Every job starts with
+  [`step-security/harden-runner`](https://github.com/step-security/harden-runner) in audit mode
+  (`egress-policy: audit`), logging all outbound network calls. This provides visibility into
+  unexpected egress from CI runners.
 
-- **Ephemeral environments** — All builds use fresh, isolated runners with no persistence between builds
+- **Ephemeral environments** — All builds use fresh, isolated runners with no persistence between
+  builds
 
 ## Permission Management
 
 When adding or modifying workflows, contributors must:
 
-1. **Explicit top-level permissions** — Set `permissions: {}` or minimal read-only permissions at the workflow level. This establishes a secure default that prevents accidental privilege escalation.
+1. **Explicit top-level permissions** — Set `permissions: {}` or minimal read-only permissions at
+   the workflow level. This establishes a secure default that prevents accidental privilege
+   escalation.
 
 2. **Job-level elevation** — Grant additional permissions at the job level only when required:
    - `id-token: write` — Required for OIDC token generation
@@ -87,7 +99,8 @@ When adding or modifying workflows, contributors must:
 
 ## Artifact Attestations
 
-All released artifacts must include cryptographically signed attestations establishing build provenance.
+All released artifacts must include cryptographically signed attestations establishing build
+provenance.
 
 ### Required Permissions
 
@@ -108,7 +121,7 @@ Use the `actions/attest` action to generate SLSA-compliant provenance:
 - name: Generate artifact attestation
   uses: actions/attest@61d634515b50b54366a3498d04742794e07fc381 # v4.1.0
   with:
-    subject-path: '${{ github.workspace }}/my-artifact'
+    subject-path: "${{ github.workspace }}/my-artifact"
 ```
 
 For container images:
@@ -117,8 +130,8 @@ For container images:
 - name: Generate container attestation
   uses: actions/attest@61d634515b50b54366a3498d04742794e07fc381 # v4.1.0
   with:
-    subject-name: '${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}'
-    subject-digest: '${{ steps.build.outputs.digest }}'
+    subject-name: "${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
+    subject-digest: "${{ steps.build.outputs.digest }}"
     push-to-registry: true
 ```
 
@@ -132,7 +145,9 @@ For container images:
 
 ## SLSA GitHub Generator
 
-For language-specific builds, use the [slsa-framework/slsa-github-generator](https://github.com/slsa-framework/slsa-github-generator) to generate SLSA Build Level 3 provenance:
+For language-specific builds, use the
+[slsa-framework/slsa-github-generator](https://github.com/slsa-framework/slsa-github-generator) to
+generate SLSA Build Level 3 provenance:
 
 ### Available Builders
 
@@ -146,15 +161,15 @@ For language-specific builds, use the [slsa-framework/slsa-github-generator](htt
 
 ### Reference Requirements
 
-> [!IMPORTANT]
-> SLSA generators must be referenced by tag (e.g., `@v2.1.0`) for `slsa-verifier` to validate the trusted builder. This is an intentional exception to the SHA-pinning requirement.
+> [!IMPORTANT] SLSA generators must be referenced by tag (e.g., `@v2.1.0`) for `slsa-verifier` to
+> validate the trusted builder. This is an intentional exception to the SHA-pinning requirement.
 
 ```yaml
 jobs:
   build:
     uses: slsa-framework/slsa-github-generator/.github/workflows/builder_go_slsa3.yml@v2.1.0
     with:
-      go-version: '1.26'
+      go-version: "1.26"
       # ... other inputs
 ```
 

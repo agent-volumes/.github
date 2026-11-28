@@ -4,8 +4,9 @@ This document defines the canonical label taxonomy for the Agent Volumes Organiz
 maintainers classify work, route issues to the right repository, and track issue lifecycle state
 consistently.
 
-> [!NOTE] This document defines the taxonomy. Labels still need to be created in each repository
-> before issue forms can apply them automatically.
+> [!NOTE]  
+> This document defines the taxonomy. Labels still need to be created in each repository before
+> issue forms can apply them automatically.
 
 ## Type Labels
 

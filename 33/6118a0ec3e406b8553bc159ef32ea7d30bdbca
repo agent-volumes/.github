@@ -1,0 +1,25 @@
+.github/workflows/dependency-review-reusable.yml
+  s_bbbc364fc842e0::t_133056c350a4f0 10,13,15,18,20,23,25,30,33
+.github/workflows/osv-scanner-full-reusable.yml
+  s_bbbc364fc842e0::t_fd8e1501a1bacf 7,14,17,19,22,24,27,29,34,39
+.github/workflows/osv-scanner-pr-reusable.yml
+  s_bbbc364fc842e0::t_d32c578b39ac90 7,14,17,19,24,29
+.github/workflows/scorecard-reusable.yml
+  s_bbbc364fc842e0::t_4fb1bc0477df2b 13,16,18,21,23,28-30,33,35,38,40,45,50,67-69,119,129
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "336118a0ec3e406b8553bc159ef32ea7d30bdbca",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

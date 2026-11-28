@@ -1,0 +1,27 @@
+assets/logo/src/banner/solid-bg/agent-volumes-logo-banner-with-bg-1.91-1.svg
+  s_bbbc364fc842e0::t_2e8b5e4379d09c 50-58,79-87
+assets/logo/src/banner/solid-bg/agent-volumes-logo-banner-with-bg-16-9.svg
+  s_bbbc364fc842e0::t_7a1e4d716d6f07 50-58,79-87
+assets/logo/src/banner/solid-bg/agent-volumes-logo-banner-with-bg-4-1.svg
+  s_bbbc364fc842e0::t_c46a0f7ce85e01 50-58,79-87
+assets/logo/src/banner/solid-bg/agent-volumes-logo-banner-with-bg-5.9-1.svg
+  s_bbbc364fc842e0::t_7e3082d611ef44 50-58,79-87
+assets/logo/src/banner/solid-bg/agent-volumes-logo-banner-with-bg-agent-volumes-only.svg
+  s_bbbc364fc842e0::t_edd82a53ef1643 1-6,55-63,84-92
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "b08ec77e0af42de109cfd791ec5201ae8adcf5d1",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

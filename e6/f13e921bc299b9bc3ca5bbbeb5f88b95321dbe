@@ -1,0 +1,19 @@
+assets/logo/src/banner/light-theme-without-bg/agent-volumes-logo-banner-light-theme-without-bg-agent-volumes-only.svg
+  s_bbbc364fc842e0::t_d52362f04b89be 1-6
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e6f13e921bc299b9bc3ca5bbbeb5f88b95321dbe",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

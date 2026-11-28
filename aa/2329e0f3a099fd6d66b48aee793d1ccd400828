@@ -1,0 +1,21 @@
+.editorconfig
+  s_bbbc364fc842e0::t_0b1536c8d1470b 1-12
+.prettierrc
+  s_bbbc364fc842e0::t_25fe211555fad2 3-4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "aa2329e0f3a099fd6d66b48aee793d1ccd400828",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

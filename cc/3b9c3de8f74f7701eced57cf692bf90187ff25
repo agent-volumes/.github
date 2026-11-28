@@ -1,0 +1,19 @@
+.editorconfig
+  s_b92e57c6ec852a::t_8ce242d5edf842 13-16
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "cc3b9c3de8f74f7701eced57cf692bf90187ff25",
+  "prompts": {},
+  "sessions": {
+    "s_b92e57c6ec852a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "unknown"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

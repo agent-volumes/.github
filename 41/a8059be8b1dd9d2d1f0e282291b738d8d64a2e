@@ -1,0 +1,27 @@
+assets/logo/src/banner/dark-theme-without-bg/agent-volumes-logo-banner-dark-theme-without-bg-1.91-1.svg
+  s_bbbc364fc842e0::t_685c5b10a0bf65 43-51,72-80
+assets/logo/src/banner/dark-theme-without-bg/agent-volumes-logo-banner-dark-theme-without-bg-16-9.svg
+  s_bbbc364fc842e0::t_679921dbf9241b 43-51,72-80
+assets/logo/src/banner/dark-theme-without-bg/agent-volumes-logo-banner-dark-theme-without-bg-4-1.svg
+  s_bbbc364fc842e0::t_b9e1433a672df7 40-48,65-73
+assets/logo/src/banner/dark-theme-without-bg/agent-volumes-logo-banner-dark-theme-without-bg-5.9-1.svg
+  s_bbbc364fc842e0::t_d89470e8456e19 43-51,72-80
+assets/logo/src/banner/dark-theme-without-bg/agent-volumes-logo-banner-dark-theme-without-bg-agent-volumes-only.svg
+  s_bbbc364fc842e0::t_c45cc18a04191b 1-6,45-53,70-78
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "41a8059be8b1dd9d2d1f0e282291b738d8d64a2e",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

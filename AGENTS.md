@@ -1,12 +1,13 @@
 # PROJECT KNOWLEDGE BASE
 
-**Generated:** 12026-05-04
-**Commit:** 2cfd9da
-**Branch:** main
+**Generated:** 12026-05-04 **Commit:** 2cfd9da **Branch:** main
 
 ## OVERVIEW
 
-Organization-wide `.github` repository for the Agent Volumes org. Contains no runtime code — only community health files, reusable CI workflows, documentation, and branding assets. GitHub automatically applies health files (CODE_OF_CONDUCT, CONTRIBUTING, SECURITY) to all repos in the org that lack their own copies.
+Organization-wide `.github` repository for the Agent Volumes org. Contains no runtime code — only
+community health files, reusable CI workflows, documentation, and branding assets. GitHub
+automatically applies health files (CODE_OF_CONDUCT, CONTRIBUTING, SECURITY) to all repos in the org
+that lack their own copies.
 
 ## STRUCTURE
 
@@ -51,25 +52,36 @@ Organization-wide `.github` repository for the Agent Volumes org. Contains no ru
 - **Package manager:** Bun (`bun install`, `bun run`, `bunx`)
 - **Pre-commit:** Lefthook (installed via `prepare` script; config in `lefthook.yml`)
 - **Markdown linting:** `markdownlint-cli2` with `.markdownlint-cli2.jsonc`
-- **Formatting:** Prettier with `.prettierrc` for Markdown, YAML, JSON/JSONC, JavaScript config, and source SVGs
+- **Formatting:** Prettier with `.prettierrc` for Markdown, YAML, JSON/JSONC, JavaScript config, and
+  source SVGs
 - **CI:** GitHub Actions, Ubuntu-latest runners, Read-only permissions by default
 - **Action pinning:** All external actions pinned to commit SHA + comment with version tag
-  - **Reusable workflows:** Internal reusables referenced by branch (`@main`) — **exception** to SHA-pinning rule (see README note)
-- **DCO required:** All commits must include a `Signed-off-by` line. Use `git commit -s` or configure your Git client to sign off automatically. See `CONTRIBUTING.md` §"Commit Sign-Off (DCO)" for details.
+  - **Reusable workflows:** Internal reusables referenced by branch (`@main`) — **exception** to
+    SHA-pinning rule (see README note)
+- **DCO required:** All commits must include a `Signed-off-by` line. Use `git commit -s` or
+  configure your Git client to sign off automatically. See `CONTRIBUTING.md` §"Commit Sign-Off
+  (DCO)" for details.
 
 ## ANTI-PATTERNS (THIS PROJECT)
 
-- **Do not** make `lint-and-format.yml` reusable — it is tightly coupled to this repo's Bun/Prettier/markdownlint/SVGO stack
-- **Do not** SHA-pin internal reusable workflows from this repo — Dependabot cannot update them; use `@main`
-- **Do not** leave `continue-on-error: true` on scanner steps without explicit justification — OSV full scanner currently has this (review before relying on it for security gating)
+- **Do not** make `lint-and-format.yml` reusable — it is tightly coupled to this repo's
+  Bun/Prettier/markdownlint/SVGO stack
+- **Do not** SHA-pin internal reusable workflows from this repo — Dependabot cannot update them; use
+  `@main`
+- **Do not** leave `continue-on-error: true` on scanner steps without explicit justification — OSV
+  full scanner currently has this (review before relying on it for security gating)
 - **Do not** add runtime code or `src/` — this is a docs/config repo, not a library
 
 ## UNIQUE STYLES
 
-- **Special `.github` repo:** Files at root auto-apply org-wide. Other repos inherit `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, PR template unless they provide their own.
-- **Reusable workflow architecture:** 4 reusable workflows (OSV PR, OSV Full, Dependency Review, Scorecard) designed for cross-repo consumption with standardized inputs/defaults.
-- **Security-first CI:** All workflows include `step-security/harden-runner` egress audit, minimal permissions, SARIF upload to code scanning.
-- **Spec-style contributing:** `CONTRIBUTING.md` follows OCI/W3C/IETF convention — trunk-based development, DCO sign-off, RFC 2119 keywords for normative requirements.
+- **Special `.github` repo:** Files at root auto-apply org-wide. Other repos inherit
+  `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `SECURITY.md`, PR template unless they provide their own.
+- **Reusable workflow architecture:** 4 reusable workflows (OSV PR, OSV Full, Dependency Review,
+  Scorecard) designed for cross-repo consumption with standardized inputs/defaults.
+- **Security-first CI:** All workflows include `step-security/harden-runner` egress audit, minimal
+  permissions, SARIF upload to code scanning.
+- **Spec-style contributing:** `CONTRIBUTING.md` follows OCI/W3C/IETF convention — trunk-based
+  development, DCO sign-off, RFC 2119 keywords for normative requirements.
 
 ## COMMANDS
 

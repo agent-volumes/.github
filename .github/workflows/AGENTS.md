@@ -4,7 +4,8 @@
 
 ## OVERVIEW
 
-Reusable and local CI workflows for security scanning, dependency review, and repository lint/format quality. Designed for org-wide consumption via `workflow_call`.
+Reusable and local CI workflows for security scanning, dependency review, and repository lint/format
+quality. Designed for org-wide consumption via `workflow_call`.
 
 ## WHERE TO LOOK
 
@@ -21,13 +22,19 @@ Reusable and local CI workflows for security scanning, dependency review, and re
 
 ## CONVENTIONS
 
-- **Reusable workflows:** Expose `workflow_call` inputs with sensible defaults (e.g., `fail-on-vuln: true`, `upload-sarif: true`)
-- **Action pinning:** External actions pinned to commit SHA + version comment (e.g., `actions/checkout@de0fac2e... # v6.0.2`)
-- **Internal reusables:** Referenced by branch (`@main`) — exception to SHA-pinning for cross-repo consumption
-- **Runner hardening:** All workflows start with `step-security/harden-runner` in `egress-policy: audit` mode
-- **Permission minimalism:** Default `contents: read`; job-level permissions escalated only as needed
+- **Reusable workflows:** Expose `workflow_call` inputs with sensible defaults (e.g.,
+  `fail-on-vuln: true`, `upload-sarif: true`)
+- **Action pinning:** External actions pinned to commit SHA + version comment (e.g.,
+  `actions/checkout@de0fac2e... # v6.0.2`)
+- **Internal reusables:** Referenced by branch (`@main`) — exception to SHA-pinning for cross-repo
+  consumption
+- **Runner hardening:** All workflows start with `step-security/harden-runner` in
+  `egress-policy: audit` mode
+- **Permission minimalism:** Default `contents: read`; job-level permissions escalated only as
+  needed
 
 ## ANTI-PATTERNS
 
-- `osv-scanner-full-reusable.yml` line ~51: `continue-on-error: true` on the scanner step — can mask scan failures. Pair with `fail-on-vuln` downstream or remove.
+- `osv-scanner-full-reusable.yml` line ~51: `continue-on-error: true` on the scanner step — can mask
+  scan failures. Pair with `fail-on-vuln` downstream or remove.
 - Do not convert `lint-and-format.yml` to reusable — tightly coupled to this repo's Bun toolchain.

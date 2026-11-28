@@ -10,42 +10,44 @@ on:
   workflow_call:
     inputs:
       results-file:
-        description: 'Path to the SARIF results file'
+        description: "Path to the SARIF results file"
         required: false
         type: string
-        default: 'results.sarif'
+        default: "results.sarif"
       results-format:
-        description: 'Results format (sarif, json, csv, etc.)'
+        description: "Results format (sarif, json, csv, etc.)"
         required: false
         type: string
-        default: 'sarif'
+        default: "sarif"
       publish-results:
-        description: 'Publish results to OpenSSF REST API for public repositories'
+        description: "Publish results to OpenSSF REST API for public repositories"
         required: false
         type: boolean
         default: true
       repo-token:
-        description: 'Fine-grained PAT token for Branch-Protection check on public repos or private repo installation'
+        description:
+          "Fine-grained PAT token for Branch-Protection check on public repos or private repo
+          installation"
         required: false
         type: string
-        default: ''
+        default: ""
       file-mode:
-        description: 'File mode for .gitattributes with export-ignore (e.g., git)'
+        description: "File mode for .gitattributes with export-ignore (e.g., git)"
         required: false
         type: string
-        default: ''
+        default: ""
       retention-days:
-        description: 'Artifact retention days'
+        description: "Artifact retention days"
         required: false
         type: number
         default: 5
       upload-artifact:
-        description: 'Upload results as artifact'
+        description: "Upload results as artifact"
         required: false
         type: boolean
         default: true
       upload-code-scanning:
-        description: 'Upload results to GitHub code scanning dashboard'
+        description: "Upload results to GitHub code scanning dashboard"
         required: false
         type: boolean
         default: true
@@ -62,7 +64,9 @@ jobs:
     name: Scorecard analysis
     runs-on: ubuntu-latest
     # `publish_results: true` only works when run from the default branch. conditional can be removed if disabled.
-    if: github.event.repository.default_branch == github.ref_name || github.event_name == 'pull_request'
+    if:
+      github.event.repository.default_branch == github.ref_name || github.event_name ==
+      'pull_request'
     permissions:
       # Needed for Scorecard to read repository contents.
       contents: read
@@ -112,7 +116,7 @@ jobs:
 
       # Upload the results as artifacts (optional). Commenting out will disable uploads of run results in SARIF
       # format to the repository Actions tab.
-      - name: 'Upload artifact'
+      - name: "Upload artifact"
         if: ${{ inputs.upload-artifact }}
         uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
@@ -122,7 +126,7 @@ jobs:
 
       # Upload the results to GitHub's code scanning dashboard (optional).
       # Commenting out will disable upload of results to your repo's Code Scanning dashboard
-      - name: 'Upload to code-scanning'
+      - name: "Upload to code-scanning"
         if: ${{ inputs.upload-code-scanning }}
         uses: github/codeql-action/upload-sarif@915412ff23e8b7659517e607487dbeae018f2934 # v4.39.5
         with:

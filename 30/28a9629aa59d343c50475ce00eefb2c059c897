@@ -1,0 +1,23 @@
+docs/security/dependency-security.md
+  s_bbbc364fc842e0::t_4619ae71040140 3-4,37-39,52-55,137-139,232-233
+docs/security/slsa-compliance-framework.md
+  s_bbbc364fc842e0::t_62692f00ad50db 3-4,63-65
+docs/security/workflow-hardening.md
+  s_bbbc364fc842e0::t_a451cdc2d02166 3-4,25-26,166-168
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3028a9629aa59d343c50475ce00eefb2c059c897",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

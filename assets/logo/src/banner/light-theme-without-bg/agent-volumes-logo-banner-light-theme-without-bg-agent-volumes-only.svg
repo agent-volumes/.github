@@ -1,4 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 464.799235 42.140625" width="100%" height="100%">
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 464.799235 42.140625"
+  width="100%"
+  height="100%"
+>
   <defs>
     <linearGradient id="leftPage" x1="100%" y1="100%" x2="0%" y2="0%">
       <stop offset="0%" stop-color="#6366f1" />

@@ -1,0 +1,29 @@
+README.md
+  s_b92e57c6ec852a::t_490b8aa220aaa7 133-134
+  s_b92e57c6ec852a::t_62ce08348aeafa 124
+  s_bbbc364fc842e0::t_e5c6c0ef5eba2f 125-126
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "85c18f9c1655272443ca54bf4ee0001ca8b0857b",
+  "prompts": {},
+  "sessions": {
+    "s_b92e57c6ec852a": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "unknown"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    },
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.github/ISSUE_TEMPLATE/governance-proposal.yml
+  s_bbbc364fc842e0::t_cfa0293870eaa3 3-4,17-19
+.github/ISSUE_TEMPLATE/organization-policy-change.yml
+  s_bbbc364fc842e0::t_4ce9f330e3c65b 3-4,17-19
+.github/ISSUE_TEMPLATE/routing-help.yml
+  s_bbbc364fc842e0::t_3cd88b0200d07d 3-4,17-18
+.github/ISSUE_TEMPLATE/security-policy-question.yml
+  s_bbbc364fc842e0::t_4628944ace60b3 3-4,17-19
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8787886f9ae43a43b95d1ba53b1cfc73ddf3f3e4",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

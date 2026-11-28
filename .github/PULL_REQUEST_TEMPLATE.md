@@ -25,7 +25,8 @@
 
 ## Checklist
 
-- [ ] PR title follows [Conventional Commits](https://www.conventionalcommits.org/) format: `type(scope): Summary`
+- [ ] PR title follows [Conventional Commits](https://www.conventionalcommits.org/) format:
+      `type(scope): Summary`
 - [ ] I have signed off my commits using `git commit -s` (DCO requirement)
 - [ ] Lint and format pass
 - [ ] Manual verification performed

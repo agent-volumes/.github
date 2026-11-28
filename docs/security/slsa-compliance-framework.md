@@ -1,6 +1,7 @@
 # SLSA Compliance Framework
 
-> [!NOTE] This page is part of the Agent Volumes Organization security policy. Start with
+> [!NOTE]  
+> This page is part of the Agent Volumes Organization security policy. Start with
 > [SECURITY.md](../../SECURITY.md).
 
 This organization follows the [SLSA (Supply-chain Levels for Software Artifacts)](https://slsa.dev/)
@@ -59,8 +60,9 @@ controls to prevent tampering, improve integrity, and secure software packages.
   </tbody>
 </table>
 
-> [!NOTE] SLSA v1.2 defines Build Track levels 0-3 and Source Track levels 1-4. Build L0 represents
-> no SLSA guarantees.
+> [!NOTE]  
+> SLSA v1.2 defines Build Track levels 0-3 and Source Track levels 1-4. Build L0 represents no SLSA
+> guarantees.
 
 ## SLSA Build Track Requirements
 

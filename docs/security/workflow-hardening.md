@@ -1,6 +1,7 @@
 # Workflow Hardening
 
-> [!NOTE] This page is part of the Agent Volumes Organization security policy. Start with
+> [!NOTE]  
+> This page is part of the Agent Volumes Organization security policy. Start with
 > [SECURITY.md](../../SECURITY.md).
 
 All GitHub Actions workflows enforce supply-chain protections:
@@ -21,7 +22,8 @@ All GitHub Actions workflows enforce supply-chain protections:
   - uses: actions/checkout@v6
   ```
 
-> [!NOTE] Exception for internal reusable workflows Reusable workflows published from
+> [!NOTE]  
+> Exception for internal reusable workflows Reusable workflows published from
 > `agent-volumes/.github` should be referenced by branch name (e.g., `@main`) instead of a commit
 > SHA. This repository does not maintain semantic version tags, and Dependabot cannot propose
 > updates for SHA-pinned references to internal reusable workflows. Adding tags or introducing an
@@ -161,8 +163,9 @@ generate SLSA Build Level 3 provenance:
 
 ### Reference Requirements
 
-> [!IMPORTANT] SLSA generators must be referenced by tag (e.g., `@v2.1.0`) for `slsa-verifier` to
-> validate the trusted builder. This is an intentional exception to the SHA-pinning requirement.
+> [!IMPORTANT]  
+> SLSA generators must be referenced by tag (e.g., `@v2.1.0`) for `slsa-verifier` to validate the
+> trusted builder. This is an intentional exception to the SHA-pinning requirement.
 
 ```yaml
 jobs:

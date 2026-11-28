@@ -1,6 +1,7 @@
 # Dependency Security
 
-> [!NOTE] This page is part of the Agent Volumes Organization security policy. Start with
+> [!NOTE]  
+> This page is part of the Agent Volumes Organization security policy. Start with
 > [SECURITY.md](../../SECURITY.md).
 
 All projects must commit dependency lockfiles to version control to ensure reproducible builds and
@@ -33,8 +34,9 @@ Cooldown periods delay version update PRs to allow community vetting of new rele
 supply chain attacks by providing time for malicious packages to be detected and yanked before
 adoption.
 
-> [!NOTE] Security updates bypass cooldowns and are created immediately. Cooldowns apply only to
-> version updates.
+> [!NOTE]  
+> Security updates bypass cooldowns and are created immediately. Cooldowns apply only to version
+> updates.
 
 ### Ecosystem-Specific Recommendations
 
@@ -47,9 +49,10 @@ adoption.
 | **Python/pip**            | 7-14 days | 14-21 days | 21-30 days | PyPI has slower yank response; conservative approach recommended                      |
 | **Go**                    | 3-7 days  | 7-14 days  | 14-21 days | Go modules are immutable; supply chain attacks less common but possible               |
 
-> [!IMPORTANT] SemVer-based cooldown (`semver-major-days`, `semver-minor-days`, `semver-patch-days`)
-> is only supported by package ecosystems that use Semantic Versioning. Ecosystems like **GitHub
-> Actions**, **Docker**, **Terraform**, and **Bazel** only support `default-days`.
+> [!IMPORTANT]  
+> SemVer-based cooldown (`semver-major-days`, `semver-minor-days`, `semver-patch-days`) is only
+> supported by package ecosystems that use Semantic Versioning. Ecosystems like **GitHub Actions**,
+> **Docker**, **Terraform**, and **Bazel** only support `default-days`.
 
 ### SemVer Cooldown Support by Ecosystem
 
@@ -131,8 +134,9 @@ requests for vulnerable or non-compliant dependencies before they enter the code
 diff-based analysis comparing dependencies in the PR head against the base, identifying changes that
 introduce known vulnerabilities or license violations.
 
-> [!NOTE] Dependency Review is available for all public repositories. For private repositories,
-> GitHub Advanced Security is required.
+> [!NOTE]  
+> Dependency Review is available for all public repositories. For private repositories, GitHub
+> Advanced Security is required.
 
 ### Key Differences from Dependabot
 
@@ -225,7 +229,8 @@ allow-licenses:
   - Python-2.0 # Python Software Foundation License - permissive
 ```
 
-> [!NOTE] License identifiers must be SPDX-compliant. For licenses detected as `OTHER`, use
+> [!NOTE]  
+> License identifiers must be SPDX-compliant. For licenses detected as `OTHER`, use
 > `LicenseRef-clearlydefined-OTHER` in allow/deny lists.
 
 ### Permissions Requirements

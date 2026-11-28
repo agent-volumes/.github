@@ -1,0 +1,23 @@
+.github/dependabot.yml
+  s_bbbc364fc842e0::t_61527077af42eb 13-14,16-19,27-31,33-34,37-39,42-43,45,48,58-59,61-64,70,72-73,77,79-80,84,86-87,89-90,92-94
+lefthook.yml
+  s_bbbc364fc842e0::t_0efaafaa0eede3 21,33,43
+svgo.config.mjs
+  s_bbbc364fc842e0::t_56fec81790446a 4
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d63b63cac923139ce205b9443fa1fe8cc40af311",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

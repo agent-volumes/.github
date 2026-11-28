@@ -1,0 +1,19 @@
+CODE_OF_CONDUCT.md
+  s_bbbc364fc842e0::t_c6d2c45a92fd2c 5-8,16-21,25-27,29-30,42-56,61-62,64-67,71-73,75-76,78-84,88-91,96-97,99-107,109-116,118-124,127-128,132-135,139-153
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f35ddd38deaad817a5ad2b91608e41007a290be6",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

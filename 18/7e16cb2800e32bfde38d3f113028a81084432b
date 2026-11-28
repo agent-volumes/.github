@@ -1,0 +1,14 @@
+AGENTS.md
+  h_495200fbbeca45 3-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "187e16cb2800e32bfde38d3f113028a81084432b",
+  "prompts": {},
+  "humans": {
+    "h_495200fbbeca45": {
+      "author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

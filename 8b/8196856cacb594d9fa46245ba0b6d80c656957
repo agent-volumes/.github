@@ -1,0 +1,25 @@
+.github/workflows/dependency-review.yml
+  s_bbbc364fc842e0::t_ad52bb2a3df4df 17
+.github/workflows/lint-and-format.yml
+  s_bbbc364fc842e0::t_683696399057f0 9-23,28-42
+.github/workflows/osv-scanner-smoke.yml
+  s_bbbc364fc842e0::t_a6f6176a224893 6-9
+.github/workflows/scorecard.yml
+  s_bbbc364fc842e0::t_892e7e5327c4d0 13,15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "8b8196856cacb594d9fa46245ba0b6d80c656957",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

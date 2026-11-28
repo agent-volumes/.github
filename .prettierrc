@@ -1,10 +1,7 @@
 {
   "plugins": ["@prettier/plugin-xml"],
-  "proseWrap": "preserve",
-  "singleQuote": true,
-  "trailingComma": "es5",
-  "printWidth": 120,
-  "tabWidth": 2,
+  "trailingComma": "all",
+  "proseWrap": "always",
   "overrides": [
     {
       "files": "assets/logo/src/**/*.svg",

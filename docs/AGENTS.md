@@ -20,7 +20,8 @@ Translated community health files and security policy documentation.
 ## CONVENTIONS
 
 - **Translation naming:** `CODE_OF_CONDUCT.<lang>.md` where `<lang>` is ISO 639-1 or BCP 47 code
-- **Security docs:** Placed under `security/` subdirectory; cross-referenced by `SECURITY.md` at root
+- **Security docs:** Placed under `security/` subdirectory; cross-referenced by `SECURITY.md` at
+  root
 - **Markdown:** All docs follow root-level `.markdownlint-cli2.jsonc` and `.prettierrc` rules
 
 ## ANTI-PATTERNS

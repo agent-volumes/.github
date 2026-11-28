@@ -1,9 +1,11 @@
 # Dependency Security
 
-> [!NOTE]
-> This page is part of the Agent Volumes Organization security policy. Start with [SECURITY.md](../../SECURITY.md).
+> [!NOTE]  
+> This page is part of the Agent Volumes Organization security policy. Start with
+> [SECURITY.md](../../SECURITY.md).
 
-All projects must commit dependency lockfiles to version control to ensure reproducible builds and enable security auditing.
+All projects must commit dependency lockfiles to version control to ensure reproducible builds and
+enable security auditing.
 
 ## Lockfile Requirements
 
@@ -28,10 +30,13 @@ All projects must commit dependency lockfiles to version control to ensure repro
 
 ## Dependabot Cooldown Configuration
 
-Cooldown periods delay version update PRs to allow community vetting of new releases. This mitigates supply chain attacks by providing time for malicious packages to be detected and yanked before adoption.
+Cooldown periods delay version update PRs to allow community vetting of new releases. This mitigates
+supply chain attacks by providing time for malicious packages to be detected and yanked before
+adoption.
 
-> [!NOTE]
-> Security updates bypass cooldowns and are created immediately. Cooldowns apply only to version updates.
+> [!NOTE]  
+> Security updates bypass cooldowns and are created immediately. Cooldowns apply only to version
+> updates.
 
 ### Ecosystem-Specific Recommendations
 
@@ -44,8 +49,10 @@ Cooldown periods delay version update PRs to allow community vetting of new rele
 | **Python/pip**            | 7-14 days | 14-21 days | 21-30 days | PyPI has slower yank response; conservative approach recommended                      |
 | **Go**                    | 3-7 days  | 7-14 days  | 14-21 days | Go modules are immutable; supply chain attacks less common but possible               |
 
-> [!IMPORTANT]
-> SemVer-based cooldown (`semver-major-days`, `semver-minor-days`, `semver-patch-days`) is only supported by package ecosystems that use Semantic Versioning. Ecosystems like **GitHub Actions**, **Docker**, **Terraform**, and **Bazel** only support `default-days`.
+> [!IMPORTANT]  
+> SemVer-based cooldown (`semver-major-days`, `semver-minor-days`, `semver-patch-days`) is only
+> supported by package ecosystems that use Semantic Versioning. Ecosystems like **GitHub Actions**,
+> **Docker**, **Terraform**, and **Bazel** only support `default-days`.
 
 ### SemVer Cooldown Support by Ecosystem
 
@@ -66,19 +73,26 @@ Cooldown periods delay version update PRs to allow community vetting of new rele
 
 - **Patch (z in x.y.z)**: Bug fixes only; shortest cooldown acceptable
 - **Minor (y in x.y.z)**: New features; moderate cooldown for API stability verification
-- **Major (x in x.y.z)**: Breaking changes; longest cooldown for migration planning and community feedback
+- **Major (x in x.y.z)**: Breaking changes; longest cooldown for migration planning and community
+  feedback
 
 ### Rust-Specific Considerations
 
 The Rust ecosystem has unique characteristics affecting cooldown strategy:
 
-1. **Strict SemVer Compliance**: Cargo enforces SemVer strictly. Minor updates are generally safer than in npm, but the community tends toward conservatism.
+1. **Strict SemVer Compliance**: Cargo enforces SemVer strictly. Minor updates are generally safer
+   than in npm, but the community tends toward conservatism.
 
-2. **Cargo Yank Mechanism**: Yanked crates remain available for existing `Cargo.lock` but prevent new adoption. Cooldowns work synergistically—malicious versions can be yanked before PRs are created.
+2. **Cargo Yank Mechanism**: Yanked crates remain available for existing `Cargo.lock` but prevent
+   new adoption. Cooldowns work synergistically—malicious versions can be yanked before PRs are
+   created.
 
-3. **Recent Attack Patterns** (March 2026): Five malicious crates (`chrono_anchor`, `dnp3times`, etc.) targeted CI/CD environments to exfiltrate `.env` files. Cooldowns provide critical detection window.
+3. **Recent Attack Patterns** (March 2026): Five malicious crates (`chrono_anchor`, `dnp3times`,
+   etc.) targeted CI/CD environments to exfiltrate `.env` files. Cooldowns provide critical
+   detection window.
 
-4. **Cargo.lock Pinning**: Unlike npm, Cargo.lock should always be committed. This creates natural review gates that complement cooldowns.
+4. **Cargo.lock Pinning**: Unlike npm, Cargo.lock should always be committed. This creates natural
+   review gates that complement cooldowns.
 
 ### Example Configuration
 
@@ -86,11 +100,11 @@ The Rust ecosystem has unique characteristics affecting cooldown strategy:
 # dependabot.yml - Production-grade Rust project
 version: 2
 updates:
-  - package-ecosystem: 'cargo'
-    directory: '/'
+  - package-ecosystem: "cargo"
+    directory: "/"
     schedule:
-      interval: 'weekly'
-      day: 'tuesday'
+      interval: "weekly"
+      day: "tuesday"
     cooldown:
       default-days: 7
       semver-major-days: 30
@@ -98,10 +112,10 @@ updates:
       semver-patch-days: 5
     groups:
       patch-updates:
-        patterns: ['*']
-        update-types: ['patch']
+        patterns: ["*"]
+        update-types: ["patch"]
     reviewers:
-      - 'agent-volumes/security-team'
+      - "agent-volumes/security-team"
 ```
 
 ### Additional Supply Chain Defenses
@@ -115,10 +129,14 @@ Combine cooldowns with:
 
 ## Dependency Review
 
-The [Dependency Review Action](https://github.com/actions/dependency-review-action) scans pull requests for vulnerable or non-compliant dependencies before they enter the codebase. It performs diff-based analysis comparing dependencies in the PR head against the base, identifying changes that introduce known vulnerabilities or license violations.
+The [Dependency Review Action](https://github.com/actions/dependency-review-action) scans pull
+requests for vulnerable or non-compliant dependencies before they enter the codebase. It performs
+diff-based analysis comparing dependencies in the PR head against the base, identifying changes that
+introduce known vulnerabilities or license violations.
 
-> [!NOTE]
-> Dependency Review is available for all public repositories. For private repositories, GitHub Advanced Security is required.
+> [!NOTE]  
+> Dependency Review is available for all public repositories. For private repositories, GitHub
+> Advanced Security is required.
 
 ### Key Differences from Dependabot
 
@@ -134,7 +152,7 @@ The [Dependency Review Action](https://github.com/actions/dependency-review-acti
 All repositories must implement Dependency Review with this hardened configuration:
 
 ```yaml
-name: 'Dependency Review'
+name: "Dependency Review"
 
 permissions:
   contents: read
@@ -142,12 +160,12 @@ permissions:
 on:
   pull_request:
     paths-ignore:
-      - '**.md'
-      - 'docs/**'
+      - "**.md"
+      - "docs/**"
   merge_group:
     paths-ignore:
-      - '**.md'
-      - 'docs/**'
+      - "**.md"
+      - "docs/**"
 
 jobs:
   dependency-review:
@@ -158,15 +176,15 @@ jobs:
         with:
           egress-policy: audit
 
-      - name: 'Checkout Repository'
+      - name: "Checkout Repository"
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
         with:
           persist-credentials: false
 
-      - name: 'Dependency Review'
+      - name: "Dependency Review"
         uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
         with:
-          config-file: 'agent-volumes/.github/.github/dependency-review-config.yml@main'
+          config-file: "agent-volumes/.github/.github/dependency-review-config.yml@main"
 ```
 
 ### Configuration Options
@@ -187,10 +205,10 @@ Use an allow-list approach for license compliance. Reference a centralized confi
 
 ```yaml
 # In repository workflow
-- name: 'Dependency Review'
+- name: "Dependency Review"
   uses: actions/dependency-review-action@a1d282b36b6f3519aa1f3fc636f609c47dddb294 # v5.0.0
   with:
-    config-file: 'agent-volumes/.github/.github/dependency-review-config.yml@main'
+    config-file: "agent-volumes/.github/.github/dependency-review-config.yml@main"
 ```
 
 **Standard allow-licenses list:**
@@ -211,8 +229,9 @@ allow-licenses:
   - Python-2.0 # Python Software Foundation License - permissive
 ```
 
-> [!NOTE]
-> License identifiers must be SPDX-compliant. For licenses detected as `OTHER`, use `LicenseRef-clearlydefined-OTHER` in allow/deny lists.
+> [!NOTE]  
+> License identifiers must be SPDX-compliant. For licenses detected as `OTHER`, use
+> `LicenseRef-clearlydefined-OTHER` in allow/deny lists.
 
 ### Permissions Requirements
 
@@ -240,7 +259,8 @@ Enforce Dependency Review across the organization using repository rulesets:
 3. Add requirement: **Require status checks to pass**
 4. Search for and select the `dependency-review` workflow
 
-This ensures all PRs must pass dependency review before merging, regardless of individual repository configuration.
+This ensures all PRs must pass dependency review before merging, regardless of individual repository
+configuration.
 
 ### Common Pitfalls
 
@@ -254,7 +274,9 @@ This ensures all PRs must pass dependency review before merging, regardless of i
 
 ## OSV Scanner
 
-The [OSV Scanner](https://google.github.io/osv-scanner/) workflow detects known vulnerabilities in project dependencies using the Open Source Vulnerabilities database. It complements Dependency Review by scanning the entire dependency tree, not just changed dependencies.
+The [OSV Scanner](https://google.github.io/osv-scanner/) workflow detects known vulnerabilities in
+project dependencies using the Open Source Vulnerabilities database. It complements Dependency
+Review by scanning the entire dependency tree, not just changed dependencies.
 
 ### Key Differences from Dependency Review
 
@@ -275,7 +297,8 @@ Repository-specific overrides are supported:
 
 - Set `upload-sarif: false` when SARIF upload should not be used for that repository
 - Override `scan-args` for explicit lockfiles, generated dependency artifacts, or excluded paths
-- Use `fail-on-vuln: false` only for short initial calibration, then restore the standard default of `true`
+- Use `fail-on-vuln: false` only for short initial calibration, then restore the standard default of
+  `true`
 
 ### Consumer Caller Example
 

@@ -1,12 +1,15 @@
 # Issue Routing Reference
 
-This document explains where to report issues, ask questions, or propose changes across the Agent Volumes Organization. Correct routing keeps policy discussions centralized while sending specification and implementation work to the repositories that own those decisions.
+This document explains where to report issues, ask questions, or propose changes across the Agent
+Volumes Organization. Correct routing keeps policy discussions centralized while sending
+specification and implementation work to the repositories that own those decisions.
 
 ## Routing Principles
 
 - **Centralize policy documents** in `agent-volumes/.github`.
 - **Route work issues to the repository that owns the artifact** being changed.
-- **Keep vulnerabilities private** by using the process in [`SECURITY.md`](../SECURITY.md), not public issues.
+- **Keep vulnerabilities private** by using the process in [`SECURITY.md`](../SECURITY.md), not
+  public issues.
 - **Use routing help** when the right repository is unclear.
 
 ## Quick Routing Table
@@ -37,7 +40,8 @@ Use this repository for organization-wide defaults and community governance docu
 - Common issue template, pull request template, or issue form improvements
 - Common security policy or coordinated disclosure policy questions
 - Reusable workflow policy questions
-- Governance process proposals while the organization maintains governance documents in this repository
+- Governance process proposals while the organization maintains governance documents in this
+  repository
 
 ### Pull requests accepted here
 
@@ -60,7 +64,9 @@ Route those issues to the repository that owns the affected artifact.
 
 ## `agent-volumes/agent-volumes-spec`
 
-Use the specification repository for the standard itself. It is the system of record for normative requirements, schemas, API definitions, conformance fixtures, implementer guidance, and adopter listings.
+Use the specification repository for the standard itself. It is the system of record for normative
+requirements, schemas, API definitions, conformance fixtures, implementer guidance, and adopter
+listings.
 
 ### Issues accepted there
 
@@ -98,11 +104,14 @@ Use the specification repository for the standard itself. It is the system of re
 - Universal trust root policy
 - Product certification or badge requests
 
-If an implementation-local topic reveals a gap in the standard, open it as a specification discussion and explain why it affects interoperability.
+If an implementation-local topic reveals a gap in the standard, open it as a specification
+discussion and explain why it affects interoperability.
 
 ## Future `governance` or `community` Repository
 
-The `.github` repository is the right initial home for governance-process defaults and may host governance documents while the organization is small. A separate `agent-volumes/governance` or `agent-volumes/community` repository becomes preferable once the organization needs to manage:
+The `.github` repository is the right initial home for governance-process defaults and may host
+governance documents while the organization is small. A separate `agent-volumes/governance` or
+`agent-volumes/community` repository becomes preferable once the organization needs to manage:
 
 - TSC meeting agendas or minutes
 - Working Group charters
@@ -113,22 +122,28 @@ The `.github` repository is the right initial home for governance-process defaul
 - Logo, trademark, or certification policy
 - Process RFCs
 
-After such a repository exists, route governance-process issues there and keep `.github` focused on default community health files, templates, and reusable workflow policy.
+After such a repository exists, route governance-process issues there and keep `.github` focused on
+default community health files, templates, and reusable workflow policy.
 
 ## Security Reporting
 
 **Do not open public issues for security vulnerabilities.**
 
-All vulnerability reports must follow the private reporting process in [`SECURITY.md`](../SECURITY.md). Public issues are only for non-sensitive security policy questions, such as:
+All vulnerability reports must follow the private reporting process in
+[`SECURITY.md`](../SECURITY.md). Public issues are only for non-sensitive security policy questions,
+such as:
 
 - SLSA compliance questions
 - CI/CD hardening standards
 - Dependency policy clarifications
 
-Do not include exploit details, proof-of-concept code, secrets, private vulnerability information, or unreleased advisory details in public issue forms.
+Do not include exploit details, proof-of-concept code, secrets, private vulnerability information,
+or unreleased advisory details in public issue forms.
 
 ## Labeling
 
-Maintainers use a standardized label taxonomy to route and triage issues. For label meanings and repository-specific labels, see [`labels.md`](./labels.md).
+Maintainers use a standardized label taxonomy to route and triage issues. For label meanings and
+repository-specific labels, see [`labels.md`](./labels.md).
 
-Issue forms can request default labels, but those labels must exist in the target repository before GitHub can apply them automatically.
+Issue forms can request default labels, but those labels must exist in the target repository before
+GitHub can apply them automatically.

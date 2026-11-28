@@ -1,7 +1,7 @@
 name: Routing Help
 description: Unsure where to open an issue? Ask for routing guidance here.
-title: '[ROUTING]: '
-labels: ['type:question', 'status:needs-triage']
+title: "[ROUTING]: "
+labels: ["type:question", "status:needs-triage"]
 body:
   - type: markdown
     attributes:
@@ -14,7 +14,8 @@ body:
     attributes:
       label: Routing confirmation
       options:
-        - label: I am using this form because I need help choosing the right Agent Volumes repository.
+        - label:
+            I am using this form because I need help choosing the right Agent Volumes repository.
           required: true
   - type: textarea
     id: description

@@ -1,13 +1,17 @@
 # Label Taxonomy
 
-This document defines the canonical label taxonomy for the Agent Volumes Organization. Labels help maintainers classify work, route issues to the right repository, and track issue lifecycle state consistently.
+This document defines the canonical label taxonomy for the Agent Volumes Organization. Labels help
+maintainers classify work, route issues to the right repository, and track issue lifecycle state
+consistently.
 
-> [!NOTE]
-> This document defines the taxonomy. Labels still need to be created in each repository before issue forms can apply them automatically.
+> [!NOTE]  
+> This document defines the taxonomy. Labels still need to be created in each repository before
+> issue forms can apply them automatically.
 
 ## Type Labels
 
-Type labels define the nature of an issue or pull request. Each item should have exactly one `type:` label.
+Type labels define the nature of an issue or pull request. Each item should have exactly one `type:`
+label.
 
 | Label             | Description                                                                          |
 | :---------------- | :----------------------------------------------------------------------------------- |
@@ -42,7 +46,8 @@ Impact labels indicate whether a change affects normative requirements in the sp
 
 ## Area Labels
 
-Area labels identify the affected part of a repository. Repositories should create only the area labels that match their scope.
+Area labels identify the affected part of a repository. Repositories should create only the area
+labels that match their scope.
 
 ### Common Area Labels
 
@@ -55,7 +60,8 @@ Area labels identify the affected part of a repository. Repositories should crea
 
 ### Specification Repository Area Labels
 
-The `agent-volumes/agent-volumes-spec` repository should additionally use these labels for specification-specific routing.
+The `agent-volumes/agent-volumes-spec` repository should additionally use these labels for
+specification-specific routing.
 
 | Label                 | Description                                         |
 | :-------------------- | :-------------------------------------------------- |
@@ -73,7 +79,8 @@ The `agent-volumes/agent-volumes-spec` repository should additionally use these 
 
 ## Automated and Dependency Labels
 
-These labels are applied by automation or dependency-management workflows. They may not follow the `prefix:value` pattern because upstream tools often expect simpler labels.
+These labels are applied by automation or dependency-management workflows. They may not follow the
+`prefix:value` pattern because upstream tools often expect simpler labels.
 
 | Label            | Description                                         |
 | :--------------- | :-------------------------------------------------- |
@@ -88,4 +95,5 @@ These labels are applied by automation or dependency-management workflows. They 
 - Apply exactly one `type:` label after triage.
 - Apply `impact:normative` only when a change affects requirements or implementer behavior.
 - Apply `status:needs-tsc` when a proposal requires TSC discussion or decision.
-- Keep vulnerability reports out of public issue labels; route them through [`SECURITY.md`](../SECURITY.md).
+- Keep vulnerability reports out of public issue labels; route them through
+  [`SECURITY.md`](../SECURITY.md).

@@ -1,0 +1,21 @@
+CONTRIBUTING.md
+  s_bbbc364fc842e0::t_2d2dd67417cc39 3-5,13-16,23-24,27-31,33-34,40-49,51-52,69-71,75-76,94-95,99-100,102-103,115-116,124-126,132-133,142-144,151-152,156-157,161-162
+SECURITY.md
+  s_bbbc364fc842e0::t_cf8b64d2f5d864 3-5,30-31,51-52,64-65,77-78,119-121,140-141
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "570994f6a1f781458fae596b342be44a070d0005",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

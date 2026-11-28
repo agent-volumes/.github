@@ -1,0 +1,25 @@
+assets/logo/src/square/agent-volumes-logo-square-dark-theme-without-bg-favicon.svg
+  s_bbbc364fc842e0::t_e2969f454d2687 40-48,65-73
+assets/logo/src/square/agent-volumes-logo-square-dark-theme-without-bg.svg
+  s_bbbc364fc842e0::t_f9bc722c81d8d6 40-48,65-73
+assets/logo/src/square/agent-volumes-logo-square-with-bg-favicon.svg
+  s_bbbc364fc842e0::t_c37b03c680431a 52-60,82-90
+assets/logo/src/square/agent-volumes-logo-square-with-bg.svg
+  s_bbbc364fc842e0::t_6a270ecc303e40 52-60,82-90
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "150466ce737bff0884867de0a7350b6582a58539",
+  "prompts": {},
+  "sessions": {
+    "s_bbbc364fc842e0": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_ddcdedca4ffez8b6KKoSakiCXC",
+        "model": "k3.1-pro"
+      },
+      "human_author": "Yunseo Kim <git@yunseo.kim>"
+    }
+  }
+}

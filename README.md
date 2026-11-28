@@ -121,15 +121,17 @@ Common participation paths:
 | Ask about TSC participation or governance              | [Governance Proposal](./.github/ISSUE_TEMPLATE/governance-proposal.yml) issue form                  |
 | Propose organization-wide policy or template changes   | [Organization Policy Change](./.github/ISSUE_TEMPLATE/organization-policy-change.yml) form          |
 
-> [!NOTE] `ADOPTERS.md` is for organizations and projects using or evaluating Agent Volumes. It is
-> not a certification, trademark grant, compatibility badge, or hosted-service approval.
+> [!NOTE]  
+> `ADOPTERS.md` is for organizations and projects using or evaluating Agent Volumes. It is not a
+> certification, trademark grant, compatibility badge, or hosted-service approval.
 
 ## Reusable Workflows
 
 This repository provides reusable workflows for common security and compliance checks. Consumer
 repositories can call these workflows with a single `uses:` line.
 
-> [!NOTE] Reusable workflows from `agent-volumes/.github` are an **exception** to
+> [!NOTE]  
+> Reusable workflows from `agent-volumes/.github` are an **exception** to
 > [the SHA-pinning requirement](./docs/security/workflow-hardening.md#action-references). This
 > repository does not publish semantic version tags, and Dependabot cannot propose updates for
 > SHA-pinned internal reusable workflows. Adding tags or introducing an additional automation bot

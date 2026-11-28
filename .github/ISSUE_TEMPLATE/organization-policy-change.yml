@@ -1,7 +1,7 @@
 name: Organization Policy Change
 description: Propose changes to organization-wide policies or health files.
-title: '[POLICY]: '
-labels: ['type:proposal', 'status:needs-triage', 'area:policy']
+title: "[POLICY]: "
+labels: ["type:proposal", "status:needs-triage", "area:policy"]
 body:
   - type: markdown
     attributes:
@@ -14,7 +14,9 @@ body:
     attributes:
       label: Repository confirmation
       options:
-        - label: This proposal changes organization-wide policy or default community health files, not a repository-local implementation or specification artifact.
+        - label:
+            This proposal changes organization-wide policy or default community health files, not a
+            repository-local implementation or specification artifact.
           required: true
   - type: textarea
     id: problem

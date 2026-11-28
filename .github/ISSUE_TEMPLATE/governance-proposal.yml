@@ -1,7 +1,7 @@
 name: Governance Proposal
 description: Propose changes to governance, TSC structure, or decision-making.
-title: '[GOVERNANCE]: '
-labels: ['type:governance', 'status:needs-triage', 'status:needs-tsc', 'area:governance']
+title: "[GOVERNANCE]: "
+labels: ["type:governance", "status:needs-triage", "status:needs-tsc", "area:governance"]
 body:
   - type: markdown
     attributes:
@@ -14,7 +14,9 @@ body:
     attributes:
       label: Governance confirmation
       options:
-        - label: This proposal concerns organization governance, TSC process, charter process, or cross-repository community process.
+        - label:
+            This proposal concerns organization governance, TSC process, charter process, or
+            cross-repository community process.
           required: true
   - type: textarea
     id: proposal

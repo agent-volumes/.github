@@ -1,7 +1,7 @@
 name: Security Policy Question
 description: Ask non-sensitive questions about security policies or hardening.
-title: '[SECURITY-POLICY]: '
-labels: ['type:security', 'status:needs-triage']
+title: "[SECURITY-POLICY]: "
+labels: ["type:security", "status:needs-triage"]
 body:
   - type: markdown
     attributes:
@@ -14,7 +14,9 @@ body:
     attributes:
       label: Security confirmation
       options:
-        - label: This is a non-sensitive policy question and does not include vulnerability details, proof-of-concept code, secrets, or unreleased advisory information.
+        - label:
+            This is a non-sensitive policy question and does not include vulnerability details,
+            proof-of-concept code, secrets, or unreleased advisory information.
           required: true
   - type: textarea
     id: question

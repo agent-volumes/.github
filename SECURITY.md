@@ -1,6 +1,8 @@
 # Security Policy
 
-Thank you for helping keep the Agent Volumes project and its community safe. As an independent non-profit organization focused on open specifications and documentation, we take security seriously and follow a coordinated disclosure process.
+Thank you for helping keep the Agent Volumes project and its community safe. As an independent
+non-profit organization focused on open specifications and documentation, we take security seriously
+and follow a coordinated disclosure process.
 
 ## Scope
 
@@ -25,7 +27,8 @@ The following are out of scope for this policy:
 
 Please report vulnerabilities privately:
 
-- **Preferred:** GitHub Security Advisories — Use the `Security > Advisories` tab in the relevant repository to submit a private report.
+- **Preferred:** GitHub Security Advisories — Use the `Security > Advisories` tab in the relevant
+  repository to submit a private report.
 - **Alternate:** Send a report to [security@agentvolumes.org](mailto:security@agentvolumes.org).
 
 ### What to Include
@@ -45,7 +48,8 @@ Please report vulnerabilities privately:
 | Fix for medium or low severity    | 30 days                                       |
 | Public disclosure                 | After fix is released, or 90 days from report |
 
-These timelines are best-effort commitments. We will keep you informed of progress at least every 7 business days until the issue is closed.
+These timelines are best-effort commitments. We will keep you informed of progress at least every 7
+business days until the issue is closed.
 
 ## Disclosure Policy
 
@@ -57,7 +61,8 @@ We follow coordinated disclosure:
 4. The reporter is credited in the advisory unless they request anonymity.
 5. If no fix is released within 90 days, the reporter may disclose publicly.
 
-We will not take legal action against researchers who report vulnerabilities in good faith and follow this policy.
+We will not take legal action against researchers who report vulnerabilities in good faith and
+follow this policy.
 
 ## Safe Harbor
 
@@ -69,7 +74,8 @@ We support good-faith security research. We ask that you:
 
 ## Supply Chain Integrity
 
-Agent Volumes follows the [SLSA (Supply-chain Levels for Software Artifacts)](https://slsa.dev/) framework as aspirational guidance to ensure the integrity of our specifications and documentation.
+Agent Volumes follows the [SLSA (Supply-chain Levels for Software Artifacts)](https://slsa.dev/)
+framework as aspirational guidance to ensure the integrity of our specifications and documentation.
 
 ### At a Glance
 
@@ -110,7 +116,9 @@ All repositories must enforce:
 
 ### Aspiration: Release Integrity
 
-While we currently focus on documentation and specifications, we aim to provide signed attestations and SLSA provenance for any future software artifacts or conformance tools released by the organization.
+While we currently focus on documentation and specifications, we aim to provide signed attestations
+and SLSA provenance for any future software artifacts or conformance tools released by the
+organization.
 
 ## Security Monitoring
 
@@ -129,7 +137,8 @@ While we currently focus on documentation and specifications, we aim to provide 
 
 ### Security Scorecard
 
-This organization uses [OpenSSF Scorecard](https://securityscorecards.dev/) to continuously monitor security posture:
+This organization uses [OpenSSF Scorecard](https://securityscorecards.dev/) to continuously monitor
+security posture:
 
 - Binary artifacts
 - Branch protection
